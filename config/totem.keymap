@@ -167,7 +167,7 @@ label= "FKP"                               ;
 label= "ADJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃  BT_PREV  ┃  BT_CLR   ┃  BT_NEXT  ┃           ┃   ┃           ┃  BRI_DN   ┃           ┃  BRI_DN   ┃           ┃
+//             ┃           ┃  BT_PREV  ┃  BT_CLR   ┃  BT_NEXT  ┃BT_CLR_ALL ┃   ┃           ┃  BRI_DN   ┃           ┃  BRI_DN   ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  VOL_DN   ┃   MUTE    ┃  VOL_UP   ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
@@ -178,7 +178,7 @@ label= "ADJ"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &bt BT_PRV  &bt BT_CLR   &bt BT_NXT &none           &none       &kp C_BRI_DN &none      &kp C_BRI_UP &none
+                &out OUT_TOG &bt BT_PRV &bt BT_CLR  &bt BT_NXT  &bt BT_CLR_ALL  &none       &kp C_BRI_DN &none      &kp C_BRI_UP &none
                 &none       &none       &none       &none       &none           &none       &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none
     &none       &none       &none       &none       &none       &none           &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &none       &none
                                         &none       &none       &none           &none       &none       &none
