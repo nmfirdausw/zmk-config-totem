@@ -63,20 +63,20 @@
 label= "BSE"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     W     ┃     L     ┃     Y     ┃     P     ┃     B     ┃   ┃     Z     ┃     F     ┃     O     ┃     U     ┃     '     ┃
+//             ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃   ┃     J     ┃     L     ┃     U     ┃     Y     ┃     ;     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃  SHFT C   ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃  SHFT A   ┃
+//             ┃  SHFT A   ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃  SHFT O   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃  CTRL Q   ┃     J     ┃     V     ┃     D     ┃     K     ┃   ┃     X     ┃     H     ┃     /     ┃     ,     ┃  CTRL .   ┃   RET     ┃
+// ┃    ESC    ┃  CTRL Z   ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃  CTRL /   ┃   RET     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    ALT    ┃    CMD    ┃ NSM SPACE ┃   ┃ CTR SPACE ┃    CMD    ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp W       &kp L       &kp Y       &kp P       &kp B           &kp Z       &kp F       &kp O       &kp U       &kp APOS
-                &mt LSHFT C &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &mt RSHFT A
-    &kp ESC     &mt LCTRL Q &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &mt RCTRL DOT &kp RET
+                &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
+                &mt LSHFT A &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &mt RSHFT O
+    &kp ESC     &mt LCTRL Z &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp PERIOD  &mt RCTRL FSLH &kp RET
                                         &kp LALT    &kp LCMD    &lt NSM SPACE   &lt CTR SPACE &kp RCMD  &kp RALT
                         >;
                 };
@@ -117,9 +117,9 @@ label= "NSM"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     1 !   ┃    2 @    ┃     3 #   ┃    4 $    ┃    5 %    ┃   ┃     6 ^   ┃     7 &   ┃    8 *    ┃    9 (    ┃    10 )   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃     `     ┃           ┃           ┃           ┃           ┃   ┃     ;     ┃     -     ┃     =     ┃     [     ┃     ]     ┃
+//             ┃     `     ┃           ┃           ┃           ┃           ┃   ┃     \     ┃     -     ┃     =     ┃     [     ┃     ]     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   ESC     ┃           ┃           ┃           ┃           ┃           ┃   ┃     \     ┃     '     ┃     /     ┃     ,     ┃     .     ┃    RET    ┃
+// ┃   ESC     ┃           ┃           ┃           ┃           ┃           ┃   ┃     ;     ┃     '     ┃     ,     ┃     .     ┃     /     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    ALT    ┃    CMD    ┃ NSM SPACE ┃   ┃ CTR SPACE ┃    CMD    ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -127,8 +127,8 @@ label= "NSM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &mt LSHFT GRAVE &none   &none       &none       &none           &kp SEMI    &kp MINUS   &kp EQUAL   &kp LBKT    &mt RSHFT RBKT
-    &kp ESC     &none       &none       &none       &none       &none           &kp BSLH    &kp APOS    &kp FSLH    &kp COMMA   &mt RCTRL PERIOD &kp RET         
+                &mt LSHFT GRAVE &none   &none       &none       &none           &kp BSLH    &kp MINUS   &kp EQUAL   &kp LBKT    &mt RSHFT RBKT
+    &kp ESC     &none       &none       &none       &none       &none           &kp SEMI    &kp APOS    &kp COMMA    &kp PERIOD   &mt RCTRL FSLH &kp RET         
                                         &kp LALT    &kp LCMD    &lt NSM SPACE   &lt CTR SPACE &kp RCMD  &kp RALT
                         >;
                 };
