@@ -23,24 +23,6 @@
 #define ADJ  4
 
 / {
-     combos {
-            compatible = "zmk,combos";
-            combo_adj {
-                timeout-ms = <50>;
-                key-positions = <11 12 13>;
-                bindings = <&tog ADJ>;
-            };
-            combo_fkp {
-                timeout-ms = <50>;
-                key-positions = <16 17 18>;
-                bindings = <&tog FKP>;
-            };
-            combo_caps {
-                timeout-ms = <50>;
-                key-positions = <10 11>;
-                bindings = <&kp CAPS>;
-            };
-    };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -79,7 +61,7 @@ label= "CTR"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃    ADJ    ┃    FKP    ┃     NSM   ┃    BSPC   ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃   CAPS    ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    ESC    ┃           ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -88,8 +70,8 @@ label= "CTR"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp GRAVE   &kp ESC     &trans      &kp HOME    &trans          &to NSM     &to FKP     &to ADJ      &kp BSPC    &trans
-                &trans      &kp TAB     &kp PG_UP   &kp PG_DN   &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+                &kp GRAVE   &kp ESC     &trans      &kp HOME    &trans          &to ADJ     &to FKP     &to NSM      &kp BSPC    &trans
+                &kp CAPS    &kp TAB     &kp PG_UP   &kp PG_DN   &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &trans      &trans      &trans      &kp END     &trans          &trans      &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans      &to CTR         &to BSE     &trans      &trans
                         >;
