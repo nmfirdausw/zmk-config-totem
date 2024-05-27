@@ -15,12 +15,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define BSE  0
 #define CTR  1
 #define NSM  2
 #define FKP  3
 #define ADJ  4
+
+&mmv {
+   time-to-max-speed-ms = <680>;
+   acceleration-exponent=<2>;
+};
 
 / {
 
@@ -137,20 +143,20 @@ label= "FKP"                               ;
 label= "ADJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃  BT_PREV  ┃  BT_CLR   ┃  BT_NEXT  ┃BT_CLR_ALL ┃   ┃           ┃  BRI_DN   ┃           ┃  BRI_DN   ┃           ┃
+//             ┃ SCRL_LEFT ┃  SCRL_UP  ┃   MS_UP   ┃ SCRL_DOWN ┃SCRL_RIGHT ┃   ┃  OUT_TOG  ┃  BRI_DN   ┃           ┃  BRI_DN   ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  VOL_DN   ┃   MUTE    ┃  VOL_UP   ┃           ┃
+//             ┃LEFT_CLICK ┃  MS_LEFT  ┃  MS_DOWN  ┃  MS_RIGHT ┃RIGHT_CLICK┃   ┃           ┃  VOL_DN   ┃   MUTE    ┃  VOL_UP   ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃    PREV   ┃    PP     ┃    NEXT   ┃           ┃           ┃
+// ┃           ┃           ┃  BT_PREV  ┃  BT_CLR   ┃  BT_NEXT  ┃BT_CLR_ALL ┃   ┃           ┃    PREV   ┃    PP     ┃    NEXT   ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃   SHFT    ┃    CTR    ┃   ┃    BSE    ┃    CMD    ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &out OUT_TOG &bt BT_PRV &bt BT_CLR  &bt BT_NXT  &bt BT_CLR_ALL  &trans       &kp C_BRI_DN &trans    &kp C_BRI_UP &trans
-                &trans      &trans      &trans      &trans      &trans          &trans       &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans       &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans     &trans
+                &mwh SCROLL_LEFT &mwh SCROLL_UP &mmv MOVE_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &out OUT_TOG &kp C_BRI_DN &trans &kp C_BRI_UP &trans
+                &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp RCLK &trans  &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans
+    &trans      &trans      &bt BT_PRV &bt BT_CLR  &bt BT_NXT  &bt BT_CLR_ALL   &trans       &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans     &trans
                                         &trans      &trans      &to CTR         &to BSE     &trans      &trans
                         >;
                 };
