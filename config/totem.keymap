@@ -15,18 +15,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define BSE  0
 #define CTR  1
 #define NSM  2
 #define FKP  3
 #define ADJ  4
-
-&mmv {
-   time-to-max-speed-ms = <680>;
-   acceleration-exponent=<2>;
-};
 
 / {
 
@@ -67,18 +61,18 @@ label= "CTR"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃    ADJ    ┃    FKP    ┃     NSM   ┃    BSPC   ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   CAPS    ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃    NSM    ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃           ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
+// ┃    ESC    ┃    CAPS   ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃   SHFT    ┃    CTR    ┃   ┃    BSE    ┃    CMD    ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp GRAVE   &kp ESC     &trans      &kp HOME    &trans          &to ADJ     &to FKP     &to NSM      &kp BSPC    &trans
-                &kp CAPS    &kp TAB     &kp PG_UP   &kp PG_DN   &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
-    &trans      &trans      &trans      &trans      &kp END     &trans          &trans      &trans      &trans      &trans      &trans      &trans
+                &kp GRAVE   &kp ESC     &trans      &kp HOME    &trans          &to ADJ     &to FKP     &to NSM     &kp BSPC    &trans
+                &to NSM     &kp TAB     &kp PG_UP   &kp PG_DN   &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+    &trans      &kp CAPS    &trans      &trans      &kp END     &trans          &trans      &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans      &to CTR         &to BSE     &trans      &trans
                         >;
                 };
@@ -119,9 +113,9 @@ label= "FKP"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     F1    ┃     F2    ┃     F3    ┃     F4    ┃           ┃   ┃     /     ┃     7     ┃     8     ┃     9     ┃     +     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃  SHFT F5  ┃     F6    ┃     F7    ┃     F8    ┃           ┃   ┃           ┃     4     ┃     5     ┃     6     ┃     -     ┃
+//             ┃     F5    ┃     F6    ┃     F7    ┃     F8    ┃           ┃   ┃           ┃     4     ┃     5     ┃     6     ┃     -     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   ESC     ┃  CMD F9   ┃  ALT F10  ┃    F11    ┃    F12    ┃           ┃   ┃           ┃     1     ┃     2     ┃     3     ┃     *     ┃    RET    ┃
+// ┃   ESC     ┃     F9    ┃     F10   ┃    F11    ┃    F12    ┃           ┃   ┃           ┃     1     ┃     2     ┃     3     ┃     *     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃    SHFT   ┃    CTR    ┃   ┃    BSE    ┃   CMD  0  ┃    ALT .  ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -143,20 +137,20 @@ label= "FKP"                               ;
 label= "ADJ"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃ SCRL_LEFT ┃  SCRL_UP  ┃   MS_UP   ┃ SCRL_DOWN ┃SCRL_RIGHT ┃   ┃  OUT_TOG  ┃  BRI_DN   ┃           ┃  BRI_DN   ┃           ┃
+//             ┃           ┃  BT_PREV  ┃  BT_CLR   ┃  BT_NEXT  ┃BT_CLR_ALL ┃   ┃           ┃  BRI_DN   ┃           ┃  BRI_DN   ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃LEFT_CLICK ┃  MS_LEFT  ┃  MS_DOWN  ┃  MS_RIGHT ┃RIGHT_CLICK┃   ┃           ┃  VOL_DN   ┃   MUTE    ┃  VOL_UP   ┃           ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  VOL_DN   ┃   MUTE    ┃  VOL_UP   ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃  BT_PREV  ┃  BT_CLR   ┃  BT_NEXT  ┃BT_CLR_ALL ┃   ┃           ┃    PREV   ┃    PP     ┃    NEXT   ┃           ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃    PREV   ┃    PP     ┃    NEXT   ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃   SHFT    ┃    CTR    ┃   ┃    BSE    ┃    CMD    ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &mwh SCROLL_LEFT &mwh SCROLL_UP &mmv MOVE_UP &mwh SCROLL_DOWN &mwh SCROLL_RIGHT &out OUT_TOG &kp C_BRI_DN &trans &kp C_BRI_UP &trans
-                &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp RCLK &trans  &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans
-    &trans      &none       &none       &none       &none       &none           &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans      &trans
+                &out OUT_TOG &bt BT_PRV &bt BT_CLR  &bt BT_NXT  &bt BT_CLR_ALL  &trans       &kp C_BRI_DN &trans    &kp C_BRI_UP &trans
+                &trans      &trans      &trans      &trans      &trans          &trans       &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans       &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans     &trans
                                         &trans      &trans      &to CTR         &to BSE     &trans      &trans
                         >;
                 };
