@@ -22,6 +22,10 @@
 #define FKP  3
 #define ADJ  4
 
+&lt {
+  flavor = "hold-preferred";
+};
+
 / {
 
         keymap {
@@ -47,7 +51,7 @@ label= "BSE"                               ;
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &kp ESC     &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp PERIOD  &kp FSLH    &kp RET
-                                        &kp LCTRL   &kp LSHFT   &to CTR         &kp SPACE   &kp RCMD    &kp RALT
+                                        &kp LCTRL   &kp LSHFT   &to CTR         &lt CTR SPACE &kp RCMD  &kp RALT
                         >;
                 };
 
