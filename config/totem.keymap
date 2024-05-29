@@ -23,10 +23,6 @@
 #define ADJU  4
 #define CNTR  5
 
-&lt {
-    tapping-term-ms = <100>;
-};
-
 / {
 
         keymap {
@@ -50,7 +46,7 @@ label= "BASE LAYER"                        ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &tog ADJ    &tog FKP    &tog NSM    &kp BSPC    &tog FNNP
+                &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &tog FNNP
                 &tog NRSM   &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &kp ESC     &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &tog ADJU   &kp RET 
                                         &trans      &trans      &none           &tog ALPH   &trans      &trans
@@ -176,7 +172,7 @@ label= "CONTROL LAYER"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &tog ADJ    &tog FKP    &tog NSM    &kp BSPC    &none 
-                &tog NSM    &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+                &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
                                         &trans      &trans      &none           &none       &trans      &trans
                         >;
