@@ -84,8 +84,8 @@ label= "CTR"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp GRAVE   &kp ESC     &trans      &kp HOME    &trans          &to ADJ     &to FKP     &to NSM    &kp BSPC    &trans
-                &to NSM     &kp TAB     &kp PG_UP   &kp PG_DN   &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+                &kp GRAVE   &kp ESC     &trans      &kp HOME    &trans          &tog ADJ    &tog FKP    &tog NSM    &kp BSPC    &trans
+                &tog NSM    &kp TAB     &kp PG_UP   &kp PG_DN   &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &trans      &trans      &kp END     &trans          &trans      &trans      &trans      &trans      &trans      &trans
                                         &trans      &trans      &tog CTR        &tog CTR    &trans      &trans
                         >;
