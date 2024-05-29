@@ -24,8 +24,7 @@
 #define CNTR  5
 
 &lt {
-        flavor = "hold-preferred";
-        tapping-term-ms = <100>;
+        tapping-term-ms = <200>;
 };
 
 #define MO_TOG(layer) &mo_tog layer layer
