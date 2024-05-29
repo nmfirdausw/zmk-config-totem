@@ -23,7 +23,23 @@
 #define ADJU  4
 #define CNTR  5
 
+&lt {
+        flavor = "hold-preferred";
+        tapping-term-ms = <100>;
+};
+
+#define MO_TOG(layer) &mo_tog layer layer
+
 / {
+        behaviors {
+                mo_tog: behavior_mo_tog {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "hold-preferred";
+                        tapping-term-ms = <200>;
+                        bindings = <&mo>, <&tog>;
+                };
+        };      
 
         keymap {
                 compatible = "zmk,keymap";
@@ -49,7 +65,7 @@ label= "BASE LAYER"                        ;
                 &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &tog FNNP
                 &tog NRSM   &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &kp ESC     &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &tog ADJU   &kp RET 
-                                        &trans      &trans      &none           &tog ALPH   &trans      &trans
+                                        &kp LCTRL   &kp LCMD    &none           &mo_tog CNTR ALPH &kp RSHFT &kp RALT
                         >;
                 };
 
