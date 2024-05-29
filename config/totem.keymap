@@ -25,6 +25,8 @@
 
 &lt {
         tapping-term-ms = <200>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
 };
 
 #define MO_TOG(layer) &mo_tog layer layer
