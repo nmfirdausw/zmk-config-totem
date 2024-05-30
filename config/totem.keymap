@@ -26,7 +26,7 @@
 &lt {
         tapping-term-ms = <100>;
         quick-tap-ms = <0>;
-        flavor = "hold-preferred;
+        flavor = "hold-preferred";
 };
 
 #define MO_TOG(layer) &mo_tog layer layer
