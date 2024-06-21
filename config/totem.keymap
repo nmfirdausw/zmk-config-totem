@@ -97,7 +97,7 @@ bindings = <
                 &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
                 &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
-                                        &trans      &trans      &to BASE        &trans      &trans      &trans
+                                        &trans      &trans      &tog CTR1       &trans      &trans      &trans
                         >;
                 };
         };
