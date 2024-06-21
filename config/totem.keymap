@@ -18,7 +18,8 @@
 
 #define BASE  0
 #define CTR1  1
-#define CTR2  2
+#define NRSM  2
+#define CTR2  3
 
 &lt {
         tapping-term-ms = <100>;
