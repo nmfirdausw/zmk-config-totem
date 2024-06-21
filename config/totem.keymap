@@ -84,20 +84,20 @@ bindings = <
 label= "CONTROL LAYER 1"                     ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃           ┃           ┃    BSPC   ┃   COLON   ┃
+//             ┃     `     ┃    ESC    ┃   BRI DN  ┃  BRI UP   ┃  BT NEXT  ┃   ┃           ┃   HOME    ┃   PG UP   ┃    BSPC   ┃   COLON   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃           ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃    CAPS   ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
+// ┃    ESC    ┃    CAPS   ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
-                &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
-    &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
+                &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &none       &kp HOME    &kp PG_UP   &kp BSPC    &kp COLON 
+                &none       &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+    &trans      &kp CAPS    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
                                         &trans      &trans      &tog CTR2       &trans      &trans      &trans
                         >;
                 };
@@ -109,21 +109,21 @@ bindings = <
 label= "CONTROL LAYER 2"                     ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃           ┃           ┃    BSPC   ┃   COLON   ┃
+//             ┃     `     ┃    ESC    ┃   BRI DN  ┃  BRI UP   ┃  BT NEXT  ┃   ┃           ┃   HOME    ┃   PG UP   ┃    BSPC   ┃   COLON   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃           ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃    CAPS   ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
+// ┃    ESC    ┃    CAPS   ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
-                &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
-    &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
-                                        &trans      &trans      &tog CTR2       &lt CTR2 SPACE &trans      &trans
+                &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &none       &kp HOME    &kp PG_UP   &kp BSPC    &kp COLON 
+                &none       &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+    &trans      &kp CAPS    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
+                                        &trans      &trans      &tog CTR2       &lt CTR2 SPACE &trans   &trans
                         >;
                 };
         };
