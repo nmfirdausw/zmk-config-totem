@@ -18,6 +18,7 @@
 
 #define BASE  0
 #define CTR1  1
+#define CTR2  2
 
 &lt {
         tapping-term-ms = <100>;
@@ -97,7 +98,7 @@ bindings = <
                 &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &none       &kp HOME    &kp PG_UP   &kp BSPC    &kp COLON 
                 &none       &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
-                                        &trans      &trans      &tog CTR2        &to BASE    &trans      &trans
+                                        &trans      &trans      &tog CTR2       &to BASE    &trans      &trans
                         >;
                 };
 
