@@ -19,8 +19,9 @@
 #define BASE  0
 #define CTR1  1
 #define NRSM  2
-#define ALPH  3
-#define CTR2  4
+#define FNNP  3
+#define ALPH  4
+#define CTR2  5
 
 &lt {
         tapping-term-ms = <100>;
@@ -88,9 +89,9 @@ label= "CONTROL LAYER 1"                   ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     `     ┃    ESC    ┃   BRI DN  ┃  BRI UP   ┃  BT NEXT  ┃   ┃           ┃   HOME    ┃   PG UP   ┃    BSPC   ┃   COLON   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    NRSM   ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃    CAPS   ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃    CAPS   ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
+// ┃    ESC    ┃           ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -98,8 +99,8 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &out OUT_TOG &kp HOME   &kp PG_UP   &kp BSPC    &kp COLON 
-                &none       &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
-    &trans      &kp CAPS    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
+                &kp CAPS    &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+    &trans      &none       &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
                                         &trans      &trans      &tog CTR2       &to BASE    &trans      &trans
                         >;
                 };
@@ -113,22 +114,46 @@ label= "NUMBER & SYMBOL LAYER"             ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     1 !   ┃    2 @    ┃     3 #   ┃    4 $    ┃    5 %    ┃   ┃     6 ^   ┃     7 &   ┃    8 *    ┃    9 (    ┃    10 )   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    NRSM   ┃     `     ┃           ┃           ┃           ┃   ┃     ;     ┃     -     ┃     =     ┃     [     ┃     ]     ┃
+//             ┃     `     ┃           ┃           ┃           ┃           ┃   ┃     ;     ┃     -     ┃     =     ┃     [     ┃     ]     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   ESC     ┃           ┃           ┃           ┃           ┃           ┃   ┃     \     ┃     '     ┃     ,     ┃     .     ┃     /     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    CTRL   ┃    CMD    ┃    NRSM   ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
+//                                     ┃    CTRL   ┃    CMD    ┃    CTR2   ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &tog NRSM   &kp GRAVE   &none       &none       &none           &kp SEMI    &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT
+                &kp GRAVE   &none       &none       &none       &none           &kp SEMI    &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT
     &trans      &none       &none       &none       &none       &none           &kp BSLH    &kp APOS    &kp COMMA   &kp PERIOD  &kp FSLH    &trans 
                                         &trans      &trans      &mo_sl ALPH CTR2 &lt CTR2 SPACE &trans   &trans
                         >;
                 };
 
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                fnnp_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "FUNCTION & NUMPAD"                 ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     F1    ┃     F2    ┃     F3    ┃     F4    ┃           ┃   ┃     /     ┃     7     ┃     8     ┃     9     ┃     +     ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃     F5    ┃     F6    ┃     F7    ┃     F8    ┃           ┃   ┃           ┃     4     ┃     5     ┃     6     ┃     -     ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃   ESC     ┃     F9    ┃     F10   ┃    F11    ┃    F12    ┃           ┃   ┃           ┃     1     ┃     2     ┃     3     ┃     *     ┃    RET    ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃    CTRL   ┃    CMD    ┃    FNNP   ┃   ┃    BSE    ┃   SHIFT   ┃    ALT    ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp F1     &kp F2       &kp F3      &kp F4      &none            &kp KP_SLASH &kp KP_N7 &kp KP_N8   &kp KP_N9   &kp KP_PLUS
+                &kp F5     &kp F6       &kp F7      &kp F8      &none            &none      &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
+    &trans      &kp F9     &kp F10      &kp F11     &kp F12     &none            &none      &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &kp KP_ENTER
+                                        &trans      &trans      &mo_sl ALPH CTR2 &lt CTR2 SPACE &mt RCMD KP_N0 &mt RALT KP_DOT
+                         >;
+                };
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
                 alph_layer {
@@ -165,7 +190,7 @@ label= "CONTROL LAYER 2"                   ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃    CAPS   ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃           ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
+// ┃    ESC    ┃    FNNP   ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -174,7 +199,7 @@ bindings = <
 
                 &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &out OUT_TOG &kp HOME   &kp PG_UP   &kp BSPC    &kp COLON 
                 &kp CAPS    &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
-    &trans      &none       &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
+    &trans      &to FNNP    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
                                         &trans      &trans      &to NRSM        &to BASE    &trans      &trans
                         >;
                 };
