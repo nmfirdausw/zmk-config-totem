@@ -18,6 +18,7 @@
 
 #define BASE  0
 #define CTR1  1
+#define CTR2  2
 
 &lt {
         tapping-term-ms = <100>;
@@ -78,9 +79,9 @@ bindings = <
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                cntr_layer {
+                ctr1_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "CONTROL LAYER"                     ;
+label= "CONTROL LAYER 1"                     ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃           ┃           ┃    BSPC   ┃   COLON   ┃
@@ -97,7 +98,32 @@ bindings = <
                 &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
                 &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
-                                        &trans      &trans      &tog CTR1       &trans      &trans      &trans
+                                        &trans      &trans      &tog CTR2       &trans      &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                ctr2_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "CONTROL LAYER 2"                     ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃           ┃           ┃    BSPC   ┃   COLON   ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃           ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃    ESC    ┃    CAPS   ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
+                &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+    &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
+                                        &trans      &trans      &tog CTR2       &lt CTR2 SPACE &trans      &trans
                         >;
                 };
         };
