@@ -18,7 +18,8 @@
 
 #define BASE  0
 #define CTR1  1
-#define CTR2  2
+#define NRSM  2
+#define CTR2  3
 
 &lt {
         tapping-term-ms = <100>;
@@ -73,7 +74,7 @@ bindings = <
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp PERIOD  &kp FSLH    &trans
-                                        &kp LCTRL   &kp LCMD    &mo_sl BASE CTR1 &lt CTR1 SPACE &kp RSHFT &kp RALT
+                                        &kp LCTRL   &kp LCMD    &mo_sl NRSM CTR1 &lt CTR1 SPACE &kp RSHFT &kp RALT
                         >;
                 };
 
@@ -86,7 +87,7 @@ label= "CONTROL LAYER 1"                     ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     `     ┃    ESC    ┃   BRI DN  ┃  BRI UP   ┃  BT NEXT  ┃   ┃           ┃   HOME    ┃   PG UP   ┃    BSPC   ┃   COLON   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃    NRSM   ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    ESC    ┃    CAPS   ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -96,9 +97,34 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &none       &kp HOME    &kp PG_UP   &kp BSPC    &kp COLON 
-                &none       &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+                &tog NRSM   &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
-                                        &trans      &trans      &tog CTR2       &trans      &trans      &trans
+                                        &trans      &trans      &tog CTR2       &tog CTR2   &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                nrsm_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "NUMBER & SYMBOL LAYER"             ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     1 !   ┃    2 @    ┃     3 #   ┃    4 $    ┃    5 %    ┃   ┃     6 ^   ┃     7 &   ┃    8 *    ┃    9 (    ┃    10 )   ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃    NRSM   ┃     `     ┃           ┃           ┃           ┃   ┃     ;     ┃     -     ┃     =     ┃     [     ┃     ]     ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃   ESC     ┃           ┃           ┃           ┃           ┃           ┃   ┃     \     ┃     '     ┃     ,     ┃     .     ┃     /     ┃    RET    ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃    CTRL   ┃    CMD    ┃    NRSM   ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+                &tog NRSM   &kp GRAVE   &none       &none       &none           &kp SEMI    &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT
+    &trans      &none       &none       &none       &none       &none           &kp BSLH    &kp APOS    &kp COMMA    &kp PERIOD &kp FSLH    &trans 
+                                        &trans      &trans      &mo_sl BASE CTR2 &lt CTR2 SPACE &trans   &trans
                         >;
                 };
 
@@ -111,7 +137,7 @@ label= "CONTROL LAYER 2"                     ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     `     ┃    ESC    ┃   BRI DN  ┃  BRI UP   ┃  BT NEXT  ┃   ┃           ┃   HOME    ┃   PG UP   ┃    BSPC   ┃   COLON   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃           ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃    NRSM   ┃    TAB    ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    ESC    ┃    CAPS   ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -121,9 +147,9 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp GRAVE   &kp ESC     &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &none       &kp HOME    &kp PG_UP   &kp BSPC    &kp COLON 
-                &none       &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+                &tog NRSM   &kp TAB     &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &kp END     &kp PG_DN   &none       &none       &trans 
-                                        &trans      &trans      &tog CTR2       &lt CTR2 SPACE &trans   &trans
+                                        &trans      &trans      &mo_tog NRSM CTR2 &mo_tog BASE CTR2   &trans   &trans
                         >;
                 };
         };
