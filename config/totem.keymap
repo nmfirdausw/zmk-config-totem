@@ -18,10 +18,6 @@
 
 #define BASE  0
 #define CTR1  1
-#define NRSM  2
-#define FNNP  3
-#define ADJU  4
-#define CTR2  5
 
 &lt {
         tapping-term-ms = <100>;
@@ -43,7 +39,7 @@
                         bindings = <&mo>, <&tog>;
                 };
 
-                mo_sl: behavior_mo_tog {
+                mo_sl: behavior_mo_sl {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "hold-preferred";
@@ -76,82 +72,32 @@ bindings = <
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
                 &kp A       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp O
     &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp PERIOD  &kp FSLH    &trans
-                                        &kp LCTRL   &kp LCMD    &mo_sl NRSM CTR1 &lt CTR1 SPACE &kp RSHFT &kp RALT
+                                        &kp LCTRL   &kp LCMD    &mo_sl BASE CTR1 &lt CTR1 SPACE &kp RSHFT &kp RALT
                         >;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                ctr1_layer {
+                cntr_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "CONTROL LAYER 1"                   ;
+label= "CONTROL LAYER"                     ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃    FNKP   ┃   ADJU    ┃    BSPC   ┃   COLON   ┃
+//             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃           ┃           ┃    BSPC   ┃   COLON   ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    NRSM   ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
+//             ┃           ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    ESC    ┃    CAPS   ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃    BSE    ┃   SHIFT   ┃    ALT    ┃
+//                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
-                &tog NRSM   &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
+                &none       &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
-                                        &trans      &trans      &tog CTR1       &trans      &trans      &trans
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                nrsm_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "NUMBER & SYMBOL LAYER"             ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     1 !   ┃    2 @    ┃     3 #   ┃    4 $    ┃    5 %    ┃   ┃     6 ^   ┃     7 &   ┃    8 *    ┃    9 (    ┃    10 )   ┃
-//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    NRSM   ┃     `     ┃           ┃           ┃           ┃   ┃     ;     ┃     -     ┃     =     ┃     [     ┃     ]     ┃
-// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   ESC     ┃           ┃           ┃           ┃           ┃           ┃   ┃     \     ┃     '     ┃     ,     ┃     .     ┃     /     ┃    RET    ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    CTRL   ┃    CMD    ┃    NRSM   ┃   ┃   SPACE   ┃   SHIFT   ┃    ALT    ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
-                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &tog NRSM   &kp GRAVE   &none       &none       &none           &kp SEMI    &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT
-    &trans      &none       &none       &none       &none       &none           &kp BSLH    &kp APOS    &kp COMMA   &kp PERIOD  &kp FSLH    &trans 
-                                        &trans      &trans      &mo_sl BASE CTR2 &lt CTR2 SPACE &trans   &trans
-                        >;
-                };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                ctr2_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "CONTROL LAYER 1"                   ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     `     ┃    ESC    ┃           ┃    HOME   ┃           ┃   ┃           ┃    FNKP   ┃   ADJU    ┃    BSPC   ┃   COLON   ┃
-//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    NRSM   ┃    TAB    ┃  PG UP    ┃   PG DOWN ┃           ┃   ┃   LEFT    ┃    DOWN   ┃     UP    ┃    RIGHT  ┃    RET    ┃
-// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃    CAPS   ┃           ┃           ┃    END    ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃    RET    ┃
-// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    CTRL   ┃    CMD    ┃   BASE    ┃   ┃    BSE    ┃   SHIFT   ┃    ALT    ┃
-//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
-                &kp GRAVE   &kp ESC     &none       &kp HOME    &none           &none       &none       &none       &kp BSPC    &kp COLON 
-                &tog NRSM   &kp TAB     &kp PG_UP   &kp PG_DN   &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
-    &trans      &kp CAPS    &none       &none       &kp END     &none           &none       &none       &none       &none       &none       &trans 
-                                        &trans      &trans      &tog CTR2       &trans      &trans      &trans
+                                        &trans      &trans      &to BASE        &trans      &trans      &trans
                         >;
                 };
         };
