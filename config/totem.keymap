@@ -127,7 +127,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp LPAR    &kp SEMI
+                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp PLUS        &kp EQUAL   &kp GT      &kp FSLH    &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &trans      &none           &lt CTR2 SPACE &trans   &trans
                         >;
@@ -152,7 +152,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
-                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp LPAR    &kp SEMI
+                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp PLUS        &kp EQUAL   &kp GT      &kp FSLH    &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &trans      &to NRS2        &to BASE   &trans  &trans
                         >;
@@ -177,7 +177,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp LPAR    &kp SEMI
+                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp PLUS        &kp EQUAL   &kp GT      &kp FSLH    &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &trans      &mo_sl ALPH SYM2 &lt CTR2 SPACE &trans  &trans
                         >;
@@ -202,7 +202,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
-                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp LPAR    &kp SEMI
+                &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp PLUS        &kp EQUAL   &kp GT      &kp FSLH    &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &trans      &to NRS2        &to BASE   &trans  &trans
                         >;
