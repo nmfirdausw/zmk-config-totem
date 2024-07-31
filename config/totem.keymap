@@ -37,6 +37,12 @@
         flavor = "hold-preferred";
 };
 
+&mt {
+        tapping-term-ms = <200>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
+};
+
 #define MO_TOG(layer) &mo_tog layer layer
 #define MO_SL(layer) &mo_sl layer layer
 
@@ -58,25 +64,6 @@
                         bindings = <&mo>, <&sl>;
                 };
 
-                lhm: left_homerow_mod {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "tap-unless-interrupted";
-                        tapping-term-ms = <50>;
-                        quick-tap-ms = <100>;
-                        bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <16 17 18 19>;
-                };
-
-                rhm: right_homerow_mod {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "tap-unless-interrupted";
-                        tapping-term-ms = <50>;
-                        quick-tap-ms = <100>;
-                        bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <10 11 12 13>;
-                };
         };
 
         keymap {
@@ -101,7 +88,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp W       &kp L       &kp Y       &kp P       &kp B           &kp Z       &kp F       &kp O       &kp U       &kp APOS
-                &lhm LCTRL C &lhm LALT R &lhm LCMD S &lhm LSHFT T &kp G         &kp M       &rhm RSHFT N &rhm RCMD E &rhm RALT I &rhm RCTRL A
+                &mt LCTRL C &mt LALT R  &mt LCMD S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCMD E  &mt RALT I  &mt RCTRL A
     &kp ESC     &kp Q       &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &kp PERIOD  &kp RET
                                         &kp GLOBE   &mo_sl NRS1 NRS1 &lt CTR1 SPACE &lt CTR2 BSPC &mo_sl SYM1 SYM1  &mo ADJS
                         >;
@@ -126,7 +113,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &lhm LCTRL COLON &lhm LALT RPAR &lhm LCMD LBRC &lhm LSHFT LBKT &kp G &kp M  &rhm RSHFT RBKT &rhm RCMD RBRC &rhm RALT RPAR &rhm RCTRL SEMI
+                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &none       &trans          &trans      &mo_sl ALPH ALPH &to BASE
                         >;
@@ -152,7 +139,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
-                &lhm LCTRL COLON &lhm LALT RPAR &lhm LCMD LBRC &lhm LSHFT LBKT &kp G &kp M  &rhm RSHFT RBKT &rhm RCMD RBRC &rhm RALT RPAR &rhm RCTRL SEMI
+                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &mo_sl ALPH ALPH &trans     &trans      &none       &to BASE
                         >;
@@ -278,7 +265,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &lhm LCTRL COLON &lhm LALT RPAR &lhm LCMD LBRC &lhm LSHFT LBKT &kp G &kp M  &rhm RSHFT RBKT &rhm RCMD RBRC &rhm RALT RPAR &rhm RCTRL SEMI
+                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &kp GLOBE   &mo_sl ALPH ALPH &lt CTR4 SPACE &lt CTR5 BSPC &mo_sl ALPH ALPH  &to BASE
                         >;
@@ -303,7 +290,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
-                &lhm LCTRL COLON &lhm LALT RPAR &lhm LCMD LBRC &lhm LSHFT LBKT &kp G &kp M  &rhm RSHFT RBKT &rhm RCMD RBRC &rhm RALT RPAR &rhm RCTRL SEMI
+                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &kp GLOBE   &mo_sl ALPH ALPH &lt CTR4 SPACE &lt CTR5 BSPC &mo_sl ALPH ALPH  &to BASE
                         >;
@@ -378,7 +365,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp W       &kp L       &kp Y       &kp P       &kp B           &kp Z       &kp F       &kp O       &kp U       &kp APOS
-                &lhm LCTRL C &lhm LALT R &lhm LCMD S &lhm LSHFT T &kp G         &kp M       &rhm RSHFT N &rhm RCMD E &rhm RALT I &rhm RCTRL A
+                &mt LCTRL C &mt LALT R  &mt LCMD S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCMD E  &mt RALT I  &mt RCTRL A
     &trans      &kp Q       &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &kp PERIOD    &trans
                                         &to BASE    &to BASE    &kp SPACE       &kp BSPC    &to BASE    &to BASE
                         >;
