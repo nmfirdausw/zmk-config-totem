@@ -28,6 +28,7 @@
 #define CTR4  9
 #define CTR5  10
 #define ALPH  11
+#define ADJS  12
 
 &lt {
         tapping-term-ms = <100>;
@@ -82,7 +83,7 @@ bindings = <
                 &kp W       &kp L       &kp Y       &kp P       &kp B           &kp Z       &kp F       &kp O       &kp U       &kp APOS
                 &kp C       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp A
     &kp ESC     &kp Q       &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &kp PERIOD  &kp RET
-                                        &kp GLOBE   &mo_sl NRS1 NRS1 &lt CTR1 SPACE &lt CTR2 BSPC &mo_sl SYM1 SYM1  &to BASE
+                                        &kp GLOBE   &mo_sl NRS1 NRS1 &lt CTR1 SPACE &lt CTR2 BSPC &mo_sl SYM1 SYM1  &mo ADJS
                         >;
                 };
 
@@ -107,7 +108,7 @@ bindings = <
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                 &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
-                                        &trans      &none       &trans          &trans      &mo_sl ALPH ALPH &trans
+                                        &trans      &none       &trans          &trans      &mo_sl ALPH ALPH &to BASE
                         >;
                 };
 
@@ -133,7 +134,7 @@ bindings = <
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
                 &kp COLON   &kp LPAR    &kp LBRC    &kp LBKT    &kp MINUS       &kp UNDER   &kp RBKT    &kp RBRC    &kp RPAR    &kp SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
-                                        &trans      &mo_sl ALPH ALPH &trans     &trans      &none       &trans
+                                        &trans      &mo_sl ALPH ALPH &trans     &trans      &none       &to BASE
                         >;
                 };
 
@@ -183,7 +184,7 @@ bindings = <
                 &trans      &trans      &trans      &trans      &trans          &trans      &kp HOME    &kp PG_UP   &kp BSPC    &trans 
                 &trans      &trans      &trans      &trans      &trans          &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &kp END     &kp PG_DN   &trans      &trans      &trans 
-                                        &trans      &tog NRS2   &to CTR3        &none       &tog SYM2   &trans
+                                        &trans      &tog NRS2   &to CTR3        &none       &tog SYM2   &to BASE
                         >;
                 };
 
@@ -234,7 +235,7 @@ bindings = <
                 &none       &kp GRAVE   &kp ESC     &none       &none           &none       &kp HOME    &kp PG_UP   &kp BSPC    &none  
                 &kp CAPS    &kp TAB     &none       &none       &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &none       &none       &none       &none       &none           &none       &kp END     &kp PG_DN   &none       &none       &trans 
-                                        &trans      &to NRS2    &kp SPACE       &kp BSPC    &to SYM2    &trans 
+                                        &trans      &to NRS2    &kp SPACE       &kp BSPC    &to SYM2    &to BASE 
                         >;
                 };
 
@@ -360,6 +361,31 @@ bindings = <
                 &kp C       &kp R       &kp S       &kp T       &kp G           &kp M       &kp N       &kp E       &kp I       &kp A
     &trans      &kp Q       &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &kp PERIOD    &trans
                                         &to BASE    &to BASE    &kp SPACE       &kp BSPC    &to BASE    &to BASE
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                adjs_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "ADJUST LAYER "                     ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃           ┃           ┃   BRI DN  ┃  BRI UP   ┃  BT NEXT  ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃           ┃           ┃  VOL DN   ┃  VOL UP   ┃  BT CLEAR ┃   ┃           ┃           ┃           ┃           ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃    PP     ┃   PREV    ┃   NEXT    ┃  BT PREV  ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &none       &none       &kp C_BRI_DN &kp C_BRI_UP &bt BT_NXT    &none       &none       &none       &none       &none 
+                &none       &none       &kp C_VOL_DN &kp C_VOL_UP &bt BT_CLR    &none       &none       &none       &none       &none
+    &trans      &none       &kp C_PP    &kp C_PREV  &kp C_NEXT  &bt BT_PRV      &none       &none       &none       &none       &none       &trans 
+                                        &none       &none       &none           &none       &none       &none
                         >;
                 };
 
