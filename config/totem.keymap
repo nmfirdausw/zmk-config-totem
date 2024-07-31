@@ -82,7 +82,7 @@ label= "BASE LAYER"                        ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃    ESC    ┃     Q     ┃     J     ┃     V     ┃     D     ┃     K     ┃   ┃     X     ┃     H     ┃     /     ┃     ,     ┃     .     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃   GLOBE   ┃   NRS1    ┃   SPACE   ┃   ┃    BSPC   ┃    NRS2   ┃           ┃
+//                                     ┃   GLOBE   ┃   NRS1    ┃   SPACE   ┃   ┃   SPACE   ┃    NRS2   ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -90,7 +90,7 @@ bindings = <
                 &kp W       &kp L       &kp Y       &kp P       &kp B           &kp Z       &kp F       &kp O       &kp U       &kp APOS
                 &mt LCTRL C &mt LALT R  &mt LCMD S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCMD E  &mt RALT I  &mt RCTRL A
     &kp ESC     &kp Q       &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &kp PERIOD  &kp RET
-                                        &kp GLOBE   &mo_sl NRS1 NRS1 &lt CTR1 SPACE &lt CTR2 BSPC &mo_sl SYM1 SYM1  &mo ADJS
+                                        &kp GLOBE   &mo_sl NRS1 NRS1 &lt CTR1 SPACE &lt CTR2 SPACE &mo_sl SYM1 SYM1  &mo ADJS
                         >;
                 };
 
@@ -154,7 +154,7 @@ label= "CONTROL LAYER 1"                   ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃           ┃     `     ┃     ESC   ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   CAPS    ┃    TAB    ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+//             ┃   COLON   ┃    TAB    ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -164,8 +164,8 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &trans      &kp GRAVE   &kp ESC     &trans      &trans          &trans      &trans      &trans      &trans      &trans 
-                &kp CAPS    &kp TAB     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans 
+                &kp COLON   &kp TAB     &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+    &trans      &kp CAPS    &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans      &trans 
                                         &trans      &tog NRS2   &none           &to CTR3    &tog SYM2   &to FNNP
                         >;
                 };
@@ -209,7 +209,7 @@ label= "FUNCTION & NUMPAD"                 ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   ESC     ┃     F9    ┃     F10   ┃    F11    ┃    F12    ┃           ┃   ┃     .     ┃     1     ┃     2     ┃     3     ┃     *     ┃    RET    ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃   GLOBE   ┃           ┃   SPACE   ┃   ┃    BSPC   ┃     0     ┃    BASE   ┃
+//                                     ┃   GLOBE   ┃           ┃   SPACE   ┃   ┃   SPACE   ┃     0     ┃    BASE   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -217,7 +217,7 @@ bindings = <
                 &kp F1     &kp F2       &kp F3      &kp F4      &none            &kp KP_SLASH &kp KP_N7 &kp KP_N8   &kp KP_N9   &kp KP_PLUS
                 &kp F5     &kp F6       &kp F7      &kp F8      &none            &kp COMMA  &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
     &trans      &kp F9     &kp F10      &kp F11     &kp F12     &none            &kp PERIOD &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &kp KP_ENTER
-                                        &kp GLOBE   &none       &kp SPACE        &kp BSPC   &kp KP_N0   &to BASE
+                                        &kp GLOBE   &none       &lt CTR4 SPACE   &lt CTR5 SPACE &kp KP_N0 &to BASE
                          >;
                 };
 
@@ -234,7 +234,7 @@ label= "CONTROL LAYER 3"                   ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃    END    ┃  PG DOWN  ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    NRS2   ┃    SPACE  ┃   ┃    BSPC   ┃    SYM2   ┃           ┃
+//                                     ┃           ┃    NRS2   ┃    SPACE  ┃   ┃   SPACE   ┃    SYM2   ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -242,7 +242,7 @@ bindings = <
                 &none       &kp GRAVE   &kp ESC     &none       &none           &none       &kp HOME    &kp PG_UP   &kp BSPC    &none  
                 &kp CAPS    &kp TAB     &none       &none       &none           &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET
     &trans      &none       &none       &none       &none       &none           &none       &kp END     &kp PG_DN   &none       &none       &trans 
-                                        &trans      &to NRS2    &kp SPACE       &kp BSPC    &to SYM2    &to BASE 
+                                        &trans      &to NRS2    &kp SPACE       &kp SPACE   &to SYM2    &to BASE 
                         >;
                 };
 
@@ -259,7 +259,7 @@ label= "NUMBER & SYMBOL LAYER 2"           ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃     '     ┃     ~     ┃     \     ┃     <     ┃     =     ┃   ┃     +     ┃     >     ┃     ?     ┃     ,     ┃     .     ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃   GLOBE   ┃    ALPH   ┃   SPACE   ┃   ┃   BSPC    ┃    ALPH   ┃   BASE    ┃
+//                                     ┃   GLOBE   ┃    ALPH   ┃   SPACE   ┃   ┃   SPACE   ┃    ALPH   ┃   BASE    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -267,7 +267,7 @@ bindings = <
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                 &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
-                                        &kp GLOBE   &mo_sl ALPH ALPH &lt CTR4 SPACE &lt CTR5 BSPC &mo_sl ALPH ALPH  &to BASE
+                                        &kp GLOBE   &mo_sl ALPH ALPH &lt CTR4 SPACE &lt CTR5 SPACE &mo_sl ALPH ALPH &to BASE
                         >;
                 };
       
@@ -367,7 +367,7 @@ bindings = <
                 &kp W       &kp L       &kp Y       &kp P       &kp B           &kp Z       &kp F       &kp O       &kp U       &kp APOS
                 &mt LCTRL C &mt LALT R  &mt LCMD S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCMD E  &mt RALT I  &mt RCTRL A
     &trans      &kp Q       &kp J       &kp V       &kp D       &kp K           &kp X       &kp H       &kp FSLH    &kp COMMA   &kp PERIOD    &trans
-                                        &to BASE    &to BASE    &kp SPACE       &kp BSPC    &to BASE    &to BASE
+                                        &to BASE    &to BASE    &kp SPACE       &kp SPACE   &to BASE    &to BASE
                         >;
                 };
 
