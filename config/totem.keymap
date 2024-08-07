@@ -139,7 +139,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
-                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
+                &mt LCTRL COLON &mt LALT LPAR &mt LCMD LBRC &mt LSHFT LBKT &kp MINUS &kp UNDER &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &trans      &mo_sl ALPH ALPH &trans     &trans      &none       &to BASE
                         >;
@@ -265,7 +265,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
+                &mt LCTRL COLON &mt LALT LPAR &mt LCMD LBRC &mt LSHFT LBKT &kp MINUS &kp UNDER &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &kp GLOBE   &mo_sl ALPH ALPH &lt CTR4 SPACE &lt CTR5 SPACE &mo_sl ALPH ALPH &to BASE
                         >;
@@ -290,7 +290,7 @@ bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &kp DQT
-                &mt LCTRL COLON &mt LALT RPAR &mt LCMD LBRC &mt LSHFT LBKT &kp G &kp M      &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
+                &mt LCTRL COLON &mt LALT LPAR &mt LCMD LBRC &mt LSHFT LBKT &kp MINUS &kp UNDER &mt RSHFT RBKT &mt RCMD RBRC &mt RALT RPAR &mt RCTRL SEMI
     &trans      &kp GRAVE   &kp TILD    &kp BSLH    &kp LT      &kp EQUAL       &kp PLUS    &kp GT      &kp QMARK   &kp COMMA   &kp PERIOD  &trans 
                                         &kp GLOBE   &mo_sl ALPH ALPH &lt CTR4 SPACE &lt CTR5 BSPC &mo_sl ALPH ALPH  &to BASE
                         >;
