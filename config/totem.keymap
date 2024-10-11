@@ -79,6 +79,11 @@
                 key-positions = <16 17 18>;
                 bindings = <&tog NAV>;
             };
+            combo_cap {
+                timeout-ms = <100>;
+                key-positions = <21 22 23>;
+                bindings = <&kp CAPS>;
+            };
     };
 
     keymap {
@@ -86,16 +91,16 @@
         bse_layer {
             label= "BSE";
             bindings = <
-                         &kp W        &kp L        &kp Y           &kp P        &kp B         &kp Z     &kp F        &kp O       &kp U       &kp SQT
-                         &mt LCTRL C  &mt LALT R   &mt LCMD S      &mt LSHFT T  &kp G         &kp M     &mt RSHFT N  &mt RCMD E  &mt RALT I  &mt RCTRL A
-                &kp ESC  &kp Q        &kp J        &kp V           &kp D        &kp K         &kp X     &kp H        &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
-                                                   &mo_sl SYM SYM  &kp TAB      &kp SPACE     &kp BSPC  &kp RET      &mo_sl NUM NUM 
+                         &kp W        &kp L        &kp Y           &kp P        &kp B       &kp Z    &kp F        &kp O           &kp U       &kp SQT
+                         &mt LCTRL C  &mt LALT R   &mt LCMD S      &mt LSHFT T  &kp G       &kp M    &mt RSHFT N  &mt RCMD E      &mt RALT I  &mt RCTRL A
+                &kp ESC  &kp Q        &kp J        &kp V           &kp D        &kp K       &kp X    &kp H        &kp FSLH        &kp COMMA   &kp PERIOD   &kp RET
+                                                   &mo_sl SYM SYM  &kp SPACE    &kp TAB     &kp RET  &kp BSPC     &mo_sl NUM NUM 
             >;
         };
         nav_layer {
             label= "NAV";
             bindings = <
-                        &trans  &trans  &trans  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
+                        &trans  &trans  &trans  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &trans     &trans
                         &trans  &trans  &trans  &trans  &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
                                         &trans  &trans  &trans     &trans    &trans    &trans
@@ -113,10 +118,10 @@
         sym_layer {
             label= "SYM";
             bindings = <
-                        &kp EXCL         &kp AT         &kp HASH       &kp DLLR        &kp PRCNT     &kp CARET       &kp AMPS         &kp LPAR       &kp RPAR       &kp DQT
-                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT PLUS  &kp UNDER     &kp MINUS       &mt RSHFT EQUAL  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL SEMI
-                &trans  &trans           &trans         &trans         &trans          &trans        &kp STAR        &kp PIPE         &kp QMARK      &kp LT         &kp GT          &trans
-                                                        &none          &trans          &trans        &trans          &trans           &mo_sl NBR NBR
+                        &kp EXCL         &kp AT         &kp HASH       &kp DLLR        &kp PRCNT     &kp CARET  &kp AMPS         &kp LPAR        &kp RPAR       &kp DQT
+                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT PLUS  &kp UNDER     &kp MINUS  &mt RSHFT EQUAL  &mt RCMD LBKT   &mt RALT RBKT  &mt RCTRL SEMI
+                &trans  &trans           &trans         &trans         &trans          &trans        &kp STAR   &kp PIPE         &kp QMARK       &kp LT         &kp GT          &trans
+                                                        &none          &trans          &trans        &trans     &trans           &mo_sl NBR NBR
             >;
         };
         nbr_layer {
