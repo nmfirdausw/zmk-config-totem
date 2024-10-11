@@ -70,12 +70,12 @@
                 bindings = <&tog FNP>;
             };
             combo_esc {
-                timeout-ms = <50>;
+                timeout-ms = <100>;
                 key-positions = <1 2>;
                 bindings = <&kp ESC>;
             };
             combo_ctr {
-                timeout-ms = <50>;
+                timeout-ms = <100>;
                 key-positions = <16 17 18>;
                 bindings = <&tog CTR>;
             };
@@ -88,6 +88,11 @@
                 timeout-ms = <100>;
                 key-positions = <21 22>;
                 bindings = <&kp GLOBE>;
+            };
+            combo_ret {
+                timeout-ms = <100>;
+                key-positions = <18 19>;
+                bindings = <&kp RET>;
             };
     };
 
