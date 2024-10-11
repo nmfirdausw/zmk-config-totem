@@ -86,7 +86,7 @@
             };
             combo_glb {
                 timeout-ms = <100>;
-                key-positions = <20 21>;
+                key-positions = <21 22>;
                 bindings = <&kp GLOBE>;
             };
     };
