@@ -17,10 +17,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BSE 0
-#define NAV 1
-#define NUM 2
-#define SYM 3
-#define NBR 4
+#define NUM 1
+#define SYM 2
+#define NBR 3
+#define CTR 4
 #define ADJ 5
 #define FNP 6
 
@@ -61,7 +61,7 @@
             compatible = "zmk,combos";
             combo_adj {
                 timeout-ms = <100>;
-                key-positions = <1 2 3>;
+                key-positions = <11 12 13>;
                 bindings = <&tog ADJ>;
             };
             combo_fnp {
@@ -71,7 +71,7 @@
             };
             combo_esc {
                 timeout-ms = <50>;
-                key-positions = <11 12 13>;
+                key-positions = <1 2>;
                 bindings = <&kp ESC>;
             };
             combo_nav {
@@ -81,8 +81,13 @@
             };
             combo_cap {
                 timeout-ms = <100>;
-                key-positions = <21 22 23>;
+                key-positions = <10 11 12>;
                 bindings = <&kp CAPS>;
+            };
+            combo_glb {
+                timeout-ms = <100>;
+                key-positions = <20 21>;
+                bindings = <&kp GLOBE>;
             };
     };
 
@@ -91,19 +96,10 @@
         bse_layer {
             label= "BSE";
             bindings = <
-                         &kp W        &kp L        &kp Y       &kp P          &kp B              &kp Z           &kp F         &kp O       &kp U       &kp SQT
-                         &mt LCTRL C  &mt LALT R   &mt LCMD S  &mt LSHFT T    &kp G              &kp M           &mt RSHFT N   &mt RCMD E  &mt RALT I  &mt RCTRL A
-                &kp ESC  &kp Q        &kp J        &kp V       &kp D          &kp K              &kp X           &kp H         &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
-                                                   &kp TAB     &lt NAV SPACE  &mo_sl SYM SYM     &mo_sl NUM NUM  &lt NAV BSPC  &kp RET 
-            >;
-        };
-        nav_layer {
-            label= "NAV";
-            bindings = <
-                        &trans  &trans  &trans  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &trans     &trans
-                        &trans  &trans  &trans  &trans  &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
-                                        &trans  &trans  &trans     &trans    &trans    &trans
+                         &kp W        &kp L        &kp Y       &kp P          &kp B              &kp Z           &kp F          &kp O       &kp U       &kp SQT
+                         &mt LCTRL C  &mt LALT R   &mt LCMD S  &mt LSHFT T    &kp G              &kp M           &mt RSHFT N    &mt RCMD E  &mt RALT I  &mt RCTRL A
+                &kp ESC  &kp Q        &kp J        &kp V       &kp D          &kp K              &kp X           &kp H          &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
+                                                   &kp GRAVE   &lt CTR SPACE  &mo_sl SYM SYM     &mo_sl NUM NUM  &lt CTR SPACE  &kp TAB 
             >;
         };
         num_layer {
@@ -131,6 +127,15 @@
                         &mt LCTRL TILDE  &trans  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
                 &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans  &trans
                                                  &trans  &trans  &none      &none   &trans        &trans
+            >;
+        };
+        ctr_layer {
+            label= "CTR";
+            bindings = <
+                        &trans  &kp ESC  &kp ESC  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
+                        &trans  &trans   &trans   &trans  &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &kp RET
+                &trans  &trans  &trans   &trans   &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
+                                         &trans   &trans  &trans     &trans    &trans    &trans
             >;
         };
         adj_layer {
