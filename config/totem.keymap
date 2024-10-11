@@ -17,12 +17,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BSE 0
-#define NUM 1
-#define SYM 2
-#define NBR 3
-#define ADJ 4
-#define FNP 5
-#define CTR 6
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define NBR 4
+#define ADJ 5
+#define FNP 6
 
 &lt {
     tapping-term-ms = <100>;
@@ -57,69 +57,93 @@
         };
     };
 
+    combos {
+            compatible = "zmk,combos";
+            combo_adj {
+                timeout-ms = <100>;
+                key-positions = <1 2 3>;
+                bindings = <&tog ADJ>;
+            };
+            combo_fnp {
+                timeout-ms = <100>;
+                key-positions = <6 7 8>;
+                bindings = <&tog FNP>;
+            };
+            combo_esc {
+                timeout-ms = <50>;
+                key-positions = <11 12 13>;
+                bindings = <&kp ESC>;
+            };
+            combo_nav {
+                timeout-ms = <50>;
+                key-positions = <16 17 18>;
+                bindings = <&tog NAV>;
+            };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         bse_layer {
             label= "BSE";
             bindings = <
-                         &kp W        &kp L        &kp Y       &kp P           &kp B              &kp Z          &kp F           &kp O       &kp U       &kp APOS
-                         &mt LSHFT C  &mt LCTRL R  &mt LALT S  &kp T           &kp G              &kp M          &kp N           &mt RALT E  &mt RCTL I  &mt RSHFT A
-                &kp ESC  &kp Q        &kp J        &kp V       &kp D           &kp K              &kp X          &kp H           &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
-                                                   &kp GLOBE   &mo_sl SYM SYM  &mt LCMD SPACE     &lt CTR SPACE  &mo_sl NUM NUM  &mo ADJ
+                         &kp W        &kp L        &kp Y           &kp P        &kp B         &kp Z     &kp F        &kp O       &kp U       &kp SQT
+                         &mt LCTRL C  &mt LALT R   &mt LCMD S      &mt LSHFT T  &kp G         &kp M     &mt RSHFT N  &mt RCMD E  &mt RALT I  &mt RCTRL A
+                &kp ESC  &kp Q        &kp J        &kp V           &kp D        &kp K         &kp X     &kp H        &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
+                                                   &mo_sl SYM SYM  &kp TAB      &kp SPACE     &kp BSPC  &kp RET      &mo_sl NUM NUM 
+            >;
+        };
+        nav_layer {
+            label= "NAV";
+            bindings = <
+                        &trans  &trans  &trans  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
+                        &trans  &trans  &trans  &trans  &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
+                                        &trans  &trans  &trans     &trans    &trans    &trans
             >;
         };
         num_layer {
             label= "NUM";
             bindings = <
-                        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6          &kp N7   &kp N8       &kp N9       &kp N0
-                        &trans  &trans  &trans  &trans  &trans     &trans          &kp N4   &mt RALT N5  &mt RCTL N6  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans     &trans          &kp N1   &kp N2       &kp N3       &trans   &trans
-                                        &trans  &trans  &trans     &mt RCMD SPACE  &to BSE  &to BSE
+                        &kp N1           &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8       &kp N9       &kp N0
+                        &mt LCTRL TILDE  &trans  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
+                &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans  &trans
+                                                 &trans  &trans  &trans     &trans  &trans        &none
             >;
         };
         sym_layer {
             label= "SYM";
             bindings = <
-                        &kp EXCL         &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET       &kp AMPS        &kp STAR       &kp LPAR       &kp RPAR
-                        &mt LSHFT GRAVE  &trans  &trans    &trans    &trans        &kp MINUS       &kp EQUAL       &mt RALT LBKT  &mt RCTL RBKT  &mt RSHFT SEMI
-                &trans  &trans           &trans  &trans    &trans    &trans        &trans          &kp BSLH        &kp FSLH       &kp COMMA      &kp PERIOD      &trans
-                                                 &trans    &to BSE   &trans        &mt RCMD SPACE  &mo_sl NBR NBR  &to BSE
+                        &kp EXCL         &kp AT         &kp HASH       &kp DLLR        &kp PRCNT     &kp CARET       &kp AMPS         &kp LPAR       &kp RPAR       &kp DQT
+                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT PLUS  &kp UNDER     &kp MINUS       &mt RSHFT EQUAL  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL SEMI
+                &trans  &trans           &trans         &trans         &trans          &trans        &kp STAR        &kp PIPE         &kp QMARK      &kp LT         &kp GT          &trans
+                                                        &none          &trans          &trans        &trans          &trans           &mo_sl NBR NBR
             >;
         };
         nbr_layer {
             label= "NBR";
             bindings = <
-                        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6          &kp N7   &kp N8       &kp N9       &kp N0
-                        &trans  &trans  &trans  &trans  &trans     &trans          &kp N4   &mt RALT N5  &mt RCTL N6  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans     &trans          &kp N1   &kp N2       &kp N3       &trans   &trans
-                                        &trans  &trans  &trans     &mt RCMD SPACE  &to BSE  &to BSE
+                        &kp N1           &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8       &kp N9       &kp N0
+                        &mt LCTRL TILDE  &trans  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
+                &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans  &trans
+                                                 &none   &trans  &trans     &trans  &trans        &none
             >;
         };
         adj_layer {
             label= "ADJ";
             bindings = <
-                        &none  &none     &kp C_BRI_DN  &kp C_BRI_UP  &bt BT_NXT     &none  &none  &none  &none  &none 
-                        &none  &none     &kp C_VOL_DN  &kp C_VOL_UP  &bt BT_CLR     &none  &none  &none  &none  &none
-                &trans  &none  &kp C_PP  &kp C_PREV    &kp C_NEXT    &bt BT_PRV     &none  &none  &none  &none  &none  &trans 
-                                         &to FNP       &none         &none          &none  &none  &none
+                       &none  &none     &kp C_BRI_DN  &kp C_BRI_UP  &bt BT_NXT     &none  &none  &none  &none  &none 
+                       &none  &none     &kp C_VOL_DN  &kp C_VOL_UP  &bt BT_CLR     &none  &none  &none  &none  &none
+                &none  &none  &kp C_PP  &kp C_PREV    &kp C_NEXT    &bt BT_PRV     &none  &none  &none  &none  &none  &none 
+                                        &none         &none         &none          &none  &none  &none
             >;
         };
         fnp_layer {
             label= "FNP";
             bindings = <
-                        &kp F1  &kp F2   &kp F3     &kp F4   &none      &kp KP_SLASH   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-                        &kp F5  &kp F6   &kp F7     &kp F8   &none      &kp COMMA      &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-                &trans  &kp F9  &kp F10  &kp F11    &kp F12  &none      &kp PERIOD     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp KP_ENTER
-                                         &kp GLOBE  &none    &trans     &lt CTR SPACE  &kp KP_N0  &to BSE
-            >;
-        };
-        ctr_layer {
-            label= "CTR";
-            bindings = <
-                        &trans     &kp ESC  &kp ESC  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
-                        &kp GRAVE  &kp TAB  &trans   &trans  &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &kp RET
-                &trans  &kp CAPS   &trans   &trans   &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
-                                            &trans   &trans  &trans     &none     &trans    &trans
+                        &kp F1        &kp F2       &kp F3       &kp F4        &none      &kp KP_SLASH  &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp KP_PLUS
+                        &mt LCTRL F5  &mt LALT F6  &mt LCMD F7  &mt LSHFT F8  &none      &kp COMMA     &mt RSHFT KP_N4  &mt RCMD KP_N5  &mt RALT KP_N6  &mt RCTRL KP_MINUS
+                &trans  &kp F9        &kp F10      &kp F11      &kp F12       &none      &kp PERIOD    &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_MULTIPLY     &trans
+                                                   &trans       &trans        &trans     &trans        &trans           &trans
             >;
         };
     };
