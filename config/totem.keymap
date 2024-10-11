@@ -94,6 +94,16 @@
                 key-positions = <18 19>;
                 bindings = <&kp RET>;
             };
+            combo_bsp {
+                timeout-ms = <100>;
+                key-positions = <7 8>;
+                bindings = <&kp BSPC>;
+            };
+            combo_tab {
+                timeout-ms = <100>;
+                key-positions = <10 11>;
+                bindings = <&kp TAB>;
+            };
     };
 
     keymap {
