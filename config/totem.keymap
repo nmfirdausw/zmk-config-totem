@@ -111,10 +111,10 @@
         bse_layer {
             label= "BSE";
             bindings = <
-                         &kp W        &kp L        &kp Y       &kp P           &kp B             &kp Z          &kp F           &kp O       &kp U       &kp SQT
-                         &mt LCTRL C  &mt LALT R   &mt LCMD S  &mt LSHFT T     &kp G             &kp M          &mt RSHFT N     &mt RCMD E  &mt RALT I  &mt RCTRL A
-                &kp ESC  &kp Q        &kp J        &kp V       &kp D           &kp K             &kp X          &kp H           &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
-                                                   &kp GRAVE   &mo_sl SYM SYM  &lt CTR SPACE     &lt CTR SPACE  &mo_sl NUM NUM  &kp TAB 
+                         &kp W        &kp L        &kp Y           &kp P           &kp B             &kp Z          &kp F           &kp O           &kp U       &kp SQT
+                         &mt LCTRL C  &mt LALT R   &mt LCMD S      &mt LSHFT T     &kp G             &kp M          &mt RSHFT N     &mt RCMD E      &mt RALT I  &mt RCTRL A
+                &kp ESC  &kp Q        &kp J        &kp V           &kp D           &kp K             &kp X          &kp H           &kp COMMA       &kp PERIOD  &kp FSLH     &kp RET
+                                                   &mo_sl SYM SYM  &mo_sl NUM NUM  &lt CTR SPACE     &lt CTR SPACE  &mo_sl NUM NUM  &mo_sl SYM SYM
             >;
         };
         num_layer {
