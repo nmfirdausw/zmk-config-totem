@@ -147,7 +147,7 @@
         ctr_layer {
             label= "CTR";
             bindings = <
-                        &trans  &kp ESC  &kp ESC    &kp HOME     &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
+                        &trans  &kp ESC  &kp ESC    &kp HOME     &trans     &trans    &trans    &trans     &kp BSPC   &trans
                         &trans  &kp TAB  &kp PG_UP  &kp PG_DOWN  &trans     &kp H     &kp J     &kp K      &kp L      &kp RET
                 &trans  &trans  &trans   &trans     &kp END      &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &kp RET  &trans
                                          &trans     &trans       &trans     &trans    &trans    &trans
