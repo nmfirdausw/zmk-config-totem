@@ -122,8 +122,8 @@
             bindings = <
                         &kp N1           &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8       &kp N9       &kp N0
                         &mt LCTRL TILDE  &trans  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
-                &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans  &trans
-                                                 &trans  &trans  &trans     &trans  &none         &trans
+                &trans  &trans           &trans  &trans  &trans  &trans     &kp N0  &kp N1        &kp N2       &kp N3       &trans     &trans
+                                                 &trans  &none   &trans     &trans  &none         &trans
             >;
         };
         sym_layer {
