@@ -148,7 +148,7 @@
             label= "CTR";
             bindings = <
                         &trans  &kp ESC  &kp ESC  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
-                        &trans  &trans   &trans   &trans  &trans     &kp LEFT  &kp DOWN  &kp K      &kp RIGHT  &kp RET
+                        &trans  &trans   &trans   &trans  &trans     &kp H     &kp J     &kp K      &kp L      &kp RET
                 &trans  &trans  &trans   &trans   &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
                                          &trans   &trans  &trans     &trans    &trans    &trans
             >;
