@@ -147,10 +147,10 @@
         ctr_layer {
             label= "CTR";
             bindings = <
-                        &trans  &kp ESC  &kp ESC  &kp HOME  &trans     &trans    &trans    &kp PG_UP  &kp BSPC   &trans
-                        &trans  &trans   &trans   &trans    &trans     &kp H     &kp J     &kp K      &kp L      &kp RET
-                &trans  &trans  &trans   &trans   &kp END   &trans     &trans    &trans    &kp PG_DN  &trans     &trans   &trans
-                                         &trans   &trans    &trans     &trans    &trans    &trans
+                        &trans  &kp ESC  &kp ESC          &kp HOME         &trans     &trans    &trans    &trans     &kp BSPC   &trans
+                        &trans  &trans   &mt LCTRL PG_UP  &mt LSHFT PG_DN  &trans     &kp H     &kp J     &kp K      &kp L      &kp RET
+                &trans  &trans  &trans   &trans           &kp END          &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans   &trans
+                                         &trans           &trans           &trans     &trans    &trans    &trans
             >;
         };
         adj_layer {
