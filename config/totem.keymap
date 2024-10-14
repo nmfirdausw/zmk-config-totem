@@ -111,10 +111,10 @@
         bse_layer {
             label= "BSE";
             bindings = <
-                         &kp W        &kp L        &kp Y       &kp P           &kp B             &kp Z          &kp F           &kp O       &kp U       &kp SQT
-                         &mt LCTRL C  &mt LALT R   &mt LCMD S  &mt LSHFT T     &kp G             &kp M          &mt RSHFT N     &mt RCMD E  &mt RALT I  &mt RCTRL A
-                &kp ESC  &kp Q        &kp J        &kp V       &kp D           &kp K             &kp X          &kp H           &kp FSLH    &kp COMMA   &kp PERIOD   &kp RET
-                                                   &kp GRAVE   &mo_sl SYM SYM  &lt CTR SPACE     &lt CTR SPACE  &mo_sl NUM NUM  &kp TAB 
+                         &kp W        &kp L        &kp Y           &kp P           &kp B             &kp Z          &kp F           &kp O           &kp U       &kp SQT
+                         &mt LCTRL C  &mt LALT R   &mt LCMD S      &mt LSHFT T     &kp G             &kp M          &mt RSHFT N     &mt RCMD E      &mt RALT I  &mt RCTRL A
+                &kp ESC  &kp Q        &kp J        &kp V           &kp D           &kp K             &kp X          &kp H           &kp COMMA       &kp PERIOD  &kp FSLH     &kp RET
+                                                   &mo_sl SYM SYM  &mo_sl NUM NUM  &lt CTR SPACE     &lt CTR SPACE  &mo_sl NUM NUM  &mo_sl SYM SYM
             >;
         };
         num_layer {
@@ -122,35 +122,35 @@
             bindings = <
                         &kp N1           &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8       &kp N9       &kp N0
                         &mt LCTRL TILDE  &trans  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
-                &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans  &trans
-                                                 &trans  &trans  &trans     &trans  &none         &trans
+                &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans     &trans
+                                                 &trans  &none   &trans     &trans  &none         &trans
             >;
         };
         sym_layer {
             label= "SYM";
             bindings = <
-                        &kp EXCL         &kp AT         &kp HASH       &kp DLLR        &kp PRCNT     &kp CARET  &kp AMPS         &kp LPAR        &kp RPAR       &kp DQT
-                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT PLUS  &kp UNDER     &kp MINUS  &mt RSHFT EQUAL  &mt RCMD LBKT   &mt RALT RBKT  &mt RCTRL SEMI
-                &trans  &trans           &trans         &trans         &trans          &trans        &kp STAR   &kp PIPE         &kp QMARK       &kp LT         &kp GT          &trans
-                                                        &trans         &trans          &none         &trans     &mo_sl NBR NBR   &trans
+                        &kp EXCL         &kp AT         &kp HASH       &kp DLLR         &kp PRCNT     &kp CARET  &kp AMPS         &kp LPAR       &kp RPAR       &kp DQT
+                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT UNDER  &kp SQT       &kp STAR   &mt RSHFT MINUS  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL SEMI
+                &trans  &trans           &trans         &trans         &kp PLUS         &kp PIPE      &kp BSLH   &kp EQUAL         &kp LT         &kp GT         &kp QMARK          &trans
+                                                        &none          &mo_sl NBR NBR   &none         &trans     &mo_sl NBR NBR   &none
             >;
         };
         nbr_layer {
             label= "NBR";
             bindings = <
-                        &kp N1           &kp N2  &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8       &kp N9       &kp N0
-                        &mt LCTRL TILDE  &trans  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
-                &trans  &trans           &trans  &trans  &trans  &trans     &trans  &kp N1        &kp N2       &kp N3       &trans  &trans
-                                                 &trans  &none   &trans     &trans  &none         &trans
+                        &kp N1           &kp N2   &kp N3  &kp N4  &kp N5     &kp N6  &kp N7        &kp N8       &kp N9       &kp N0
+                        &mt LCTRL TILDE  &kp TAB  &trans  &trans  &trans     &trans  &mt RSHFT N4  &mt RCMD N5  &mt RALT N6  &kp COLON
+                &trans  &trans           &trans   &trans  &trans  &trans     &kp N0  &kp N1        &kp N2       &kp N3       &trans     &trans
+                                                  &none   &none   &trans     &trans  &none         &none
             >;
         };
         ctr_layer {
             label= "CTR";
             bindings = <
-                        &trans  &kp ESC  &kp ESC  &trans  &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
-                        &trans  &trans   &trans   &trans  &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &kp RET
-                &trans  &trans  &trans   &trans   &trans  &trans     &trans    &kp END   &kp PG_DN  &trans     &trans   &trans
-                                         &trans   &trans  &trans     &trans    &trans    &trans
+                        &trans  &kp ESC  &kp ESC    &kp HOME     &trans     &trans    &kp HOME  &kp PG_UP  &kp BSPC   &trans
+                        &trans  &kp TAB  &kp PG_UP  &kp PG_DOWN  &trans     &kp H     &kp J     &kp K      &kp L      &kp RET
+                &trans  &trans  &trans   &trans     &kp END      &trans     &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &kp RET  &trans
+                                         &trans     &trans       &trans     &trans    &trans    &trans
             >;
         };
         adj_layer {
