@@ -77,10 +77,10 @@
         lyr0_layer {
             label= "Base Layer";
             bindings = < 
-                       &none  &none  &none                  &none  &none     &none  &none  &none                  &none  &none
-                       &none  &none  &none                  &none  &none     &none  &none  &none                  &none  &none
-                &none  &none  &none  &none                  &none  &none     &none  &none  &none                  &none  &none  &none
-                                     &kp LCTRL(LALT(LCMD))  &none  &none     &none  &none  &kp RCTRL(RALT(RCMD))
+                       &none  &none  &none                  &none  &none     &none  &none  &none                   &none  &none
+                       &none  &none  &none                  &none  &none     &none  &none  &none                   &none  &none
+                &none  &none  &none  &none                  &none  &none     &none  &none  &none                   &none  &none  &none
+                                     &mt LC(LG(LALT)) CAPS  &none  &none     &none  &none  &mt RC(RG(RALT)) GLOBE
             >;
         };
         lyr1_layer {
