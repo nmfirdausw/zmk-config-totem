@@ -42,13 +42,11 @@
     behaviors {
         meta_l: meta_l {
             compatible = "zmk,behavior-tap-hold";
-            label = "META Key Left";
             #binding-cells = <0>;
             bindings = <&kp LCTRL &kp LALT &kp LCMD>;
         };
         meta_r: meta_r {
             compatible = "zmk,behavior-tap-hold";
-            label = "META Key Right";
             #binding-cells = <0>;
             bindings = <&kp RCTRL &kp RALT &kp RCMD>;
         };
