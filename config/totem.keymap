@@ -40,16 +40,6 @@
 
 / {
     behaviors {
-        meta_l: meta_l {
-            compatible = "zmk,behavior-tap-hold";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LALT &kp LCMD>;
-        };
-        meta_r: meta_r {
-            compatible = "zmk,behavior-tap-hold";
-            #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp RALT &kp RCMD>;
-        };
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -83,6 +73,15 @@
 
     keymap {
         compatible = "zmk,keymap";
+
+        meta_l: meta_l_keymap {
+            bindings = <&kp LCTRL &kp LALT &kp RCMD>;
+        };
+
+        meta_r: meta_r_keymap {
+            bindings = <&kp RCTRL &kp RALT &kp RCMD>;
+        };
+
         lyr0_layer {
             label= "Base Layer";
             bindings = < 
