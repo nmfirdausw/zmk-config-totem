@@ -86,10 +86,10 @@
         lyr0_layer {
             label= "Base Layer";
             bindings = < 
-                       &none  &none  &none  &none  &none     &none  &none  &none  &none  &none
-                       &none  &none  &none  &none  &none     &none  &none  &none  &none  &none
-                &none  &none  &none  &none  &none  &none     &none  &none  &none  &none  &none  &none
-                                     &none  &none  &none     &none  &none  &none
+                       &none  &none  &none    &none  &none     &none  &none  &none    &none  &none
+                       &none  &none  &none    &none  &none     &none  &none  &none    &none  &none
+                &none  &none  &none  &none    &none  &none     &none  &none  &none    &none  &none  &none
+                                     &meta_l  &none  &none     &none  &none  &meta_r
             >;
         };
         lyr1_layer {
