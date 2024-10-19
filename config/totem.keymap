@@ -74,21 +74,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        meta_l: meta_l_keymap {
-            bindings = <&kp LCTRL &kp LALT &kp RCMD>;
-        };
-
-        meta_r: meta_r_keymap {
-            bindings = <&kp RCTRL &kp RALT &kp RCMD>;
-        };
-
         lyr0_layer {
             label= "Base Layer";
             bindings = < 
-                       &none  &none  &none    &none  &none     &none  &none  &none    &none  &none
-                       &none  &none  &none    &none  &none     &none  &none  &none    &none  &none
-                &none  &none  &none  &none    &none  &none     &none  &none  &none    &none  &none  &none
-                                     &meta_l  &none  &none     &none  &none  &meta_r
+                       &none  &none  &none                  &none  &none     &none  &none  &none                  &none  &none
+                       &none  &none  &none                  &none  &none     &none  &none  &none                  &none  &none
+                &none  &none  &none  &none                  &none  &none     &none  &none  &none                  &none  &none  &none
+                                     &kp LCTRL(LALT(LCMD))  &none  &none     &none  &none  &kp RCTRL(RALT(RCMD))
             >;
         };
         lyr1_layer {
