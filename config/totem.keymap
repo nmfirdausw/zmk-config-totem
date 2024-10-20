@@ -87,7 +87,6 @@
                          &mt LCTRL C  &mt LALT R  &mt LCMD S             &mt LSHFT T       &kp G              &kp M            &mt RSHFT N       &mt RCMD E              &mt RALT I  &mt RCTRL A
                 &kp ESC  &kp Q        &kp J       &kp V                  &kp D             &kp K              &kp X            &kp H             &kp COMMA               &kp PERIOD  &kp FSLH     &kp RET
                                                   &mt LC(LG(LALT)) CAPS  &mo_sl LYR4 LYR4  &lt LYR2 SPACE     &lt LYR3 SPACE   &mo_sl LYR5 LYR5  &mt RC(RG(RALT)) GLOBE
-
             >;
         };
         lyr1_layer {
@@ -105,7 +104,7 @@
                         &kp N1     &kp N2         &kp N3           &kp N4           &kp N5      &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
                         &kp GRAVE  &mt LALT HOME  &mt LCTRL PG_UP  &mt LSHFT PG_DN  &kp END     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMI
                 &trans  &trans     &trans         &trans           &trans           &trans      &trans    &trans    &trans  &trans     &trans    &trans
-                                                  &trans           &none            &trans      &kp RET   &kp BSPC  &trans
+                                                  &trans           &trans           &none       &kp RET   &kp BSPC  &trans
             >;
         };
         lyr3_layer {
@@ -114,7 +113,7 @@
                         &kp N1     &kp N2         &kp N3  &kp N4   &kp N5           &kp N6      &kp N7    &kp N8    &kp N9  &kp N0
                         &kp GRAVE  &mt LALT HOME  &mt LCTRL PG_UP  &mt LSHFT PG_DN  &kp END     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMI
                 &trans  &trans     &trans         &trans           &trans           &trans      &trans    &trans    &trans  &trans     &trans    &trans
-                                                  &trans           &kp TAB          &kp ESC     &trans    &none     &trans
+                                                  &trans           &kp TAB          &kp RET     &none    &trans     &trans
             >;
         };
         lyr4_layer {
@@ -123,7 +122,7 @@
                         &kp EXCL         &kp AT         &kp HASH       &kp DLLR         &kp PRCNT     &kp AMPS  &kp CARET        &kp LPAR       &kp RPAR       &kp DQT
                         &mt LCTRL TILDE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp SQT       &kp STAR  &mt RSHFT UNDER  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL COLON
                 &trans  &trans           &trans         &trans         &kp PLUS         &kp BSLH      &kp PIPE  &kp EQUAL        &kp LT         &kp GT         &kp QMARK          &trans
-                                                        &trans         &trans           &trans        &kp RET   &kp BSPC         &trans
+                                                        &trans         &none            &trans        &kp BSPC  &kp ESC          &trans
             >;
         };
 
@@ -133,7 +132,7 @@
                         &kp EXCL         &kp AT         &kp HASH       &kp DLLR         &kp PRCNT     &kp AMPS  &kp CARET        &kp LPAR       &kp RPAR       &kp DQT
                         &mt LCTRL TILDE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp SQT       &kp STAR  &mt RSHFT UNDER  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL COLON
                 &trans  &trans           &trans         &trans         &kp PLUS         &kp BSLH      &kp PIPE  &kp EQUAL        &kp LT         &kp GT         &kp QMARK          &trans
-                                                        &trans         &kp TAB          &kp ESC       &trans    &trans           &trans
+                                                        &trans         &kp ESC          &kp TAB       &trans    &none           &trans
             >;
         };
         lyr6_layer {
