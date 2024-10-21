@@ -59,24 +59,24 @@
     };
 
     combos {
-            compatible = "zmk,combos";
-            combo_lyr1 {
-                timeout-ms = <100>;
-                key-positions = <16 17 18>;
-                bindings = <&tog LYR1>;
-            };
+        compatible = "zmk,combos";
+        combo_lyr1 {
+            timeout-ms = <100>;
+            key-positions = <16 17 18>;
+            bindings = <&tog LYR1>;
+        };
 
-            combo_lyr6 {
-                timeout-ms = <100>;
-                key-positions = <27 28 29>;
-                bindings = <&tog LYR6>;
-            };
-            combo_lyr7 {
-                timeout-ms = <100>;
-                key-positions = <11 12 13>;
-                bindings = <&tog LYR7>;
-            };
-         };
+        combo_lyr6 {
+            timeout-ms = <100>;
+            key-positions = <27 28 29>;
+            bindings = <&tog LYR6>;
+        };
+        combo_lyr7 {
+            timeout-ms = <100>;
+            key-positions = <11 12 13>;
+            bindings = <&tog LYR7>;
+        };
+     };
 
     keymap {
         compatible = "zmk,keymap";
@@ -113,7 +113,7 @@
                         &kp N1     &kp N2         &kp N3  &kp N4   &kp N5           &kp N6      &kp N7    &kp N8    &kp N9  &kp N0
                         &kp GRAVE  &mt LALT HOME  &mt LCTRL PG_UP  &mt LSHFT PG_DN  &kp END     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMI
                 &trans  &trans     &trans         &trans           &trans           &trans      &trans    &trans    &trans  &trans     &trans    &trans
-                                                  &trans           &kp TAB          &kp RET     &none    &trans     &trans
+                                                  &trans           &kp ESC          &kp RET     &none    &trans     &trans
             >;
         };
         lyr4_layer {
