@@ -41,10 +41,10 @@
             key-positions = <16 17 18>;
             bindings = <&tog LYR1>;
         };
-        combo_lyr4 {
+        combo_lyr5 {
             timeout-ms = <100>;
             key-positions = <1 2 3>;
-            bindings = <&tog LYR4>;
+            bindings = <&tog LYR5>;
         };
      };
 
@@ -53,10 +53,10 @@
         lyr0_layer {
             label = "Base Layer";
             bindings = < 
-                         &kp W        &kp L       &kp Y       &kp P             &kp B       &kp Z           &kp F             &kp O       &kp U       &kp SQT
-                         &mt LCTRL C  &mt LALT R  &mt LCMD S  &mt LSHFT T       &kp G       &kp M           &mt RSHFT N       &mt RCMD E  &mt RALT I  &mt RCTRL A
-                &kp ESC  &kp Q        &kp J       &kp V       &kp D             &kp K       &kp X           &kp H             &kp COMMA   &kp PERIOD  &kp FSLH     &kp RET
-                                                  &kp CAPS    &mo_sl LYR3 LYR3  &mo LYR2    &lt LYR2 SPACE  &mo_sl LYR3 LYR3  &kp GLOBE
+                         &kp W        &kp L       &kp Y       &kp P             &kp B             &kp Z           &kp F             &kp O       &kp U       &kp SQT
+                         &mt LCTRL C  &mt LALT R  &mt LCMD S  &mt LSHFT T       &kp G             &kp M           &mt RSHFT N       &mt RCMD E  &mt RALT I  &mt RCTRL A
+                &kp ESC  &kp Q        &kp J       &kp V       &kp D             &kp K             &kp X           &kp H             &kp COMMA   &kp PERIOD  &kp FSLH     &kp RET
+                                                  &kp CAPS    &mo_sl LYR3 LYR3  &mo LYR2 SPACE    &lt LYR2 SPACE  &mo_sl LYR4 LYR4  &kp GLOBE
             >;
         };
         lyr1_layer {
@@ -71,22 +71,31 @@
         lyr2_layer {
             label = "Control & Number Layer";
             bindings = <
-                        &kp N1     &kp N2         &kp N3           &kp N4           &kp N5     &kp N6    &kp N7            &kp N8  &kp N9     &kp N0
-                        &kp TILDE  &mt LALT HOME  &mt LCTRL PG_UP  &mt LSHFT PG_DN  &kp END    &kp LEFT  &kp DOWN          &kp UP  &kp RIGHT  &kp COLON
-                &trans  &trans     &trans         &trans           &trans           &trans     &trans    &trans            &trans  &trans     &trans    &trans
-                                                  &trans           &kp ESC          &kp TAB    &kp RET   &kp LC(LG(LALT))  &trans
+                        &trans     &trans         &trans           &trans           &trans     &trans    &trans    &trans  &trans     &trans
+                        &kp GRAVE  &mt LALT HOME  &mt LCTRL PG_UP  &mt LSHFT PG_DN  &kp END    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp COLON
+                &trans  &trans     &trans         &trans           &trans           &trans     &trans    &trans    &trans  &trans     &trans     &trans
+                                                  &trans           &kp ESC          &kp TAB    &kp RET   &kp RCMD  &trans
             >;
         };
         lyr3_layer {
             label = "Symbol Layer";
             bindings = <
                         &kp EXCL         &kp AT         &kp HASH       &kp DLLR         &kp PRCNT    &kp AMPS  &kp CARET         &kp LPAR       &kp RPAR       &kp DQT
-                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp SQT      &kp STAR  &mt RSHFT PLUS    &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL SEMI
-                &trans  &trans           &trans         &trans         &kp UNDER        &kp BSLH     &kp PIPE  &kp EQUAL         &kp LT         &kp GT         &kp QMARK          &trans
-                                                        &trans         &kp ESC          &kp TAB      &kp BSPC  &kp LC(LG(LALT))  &trans
+                        &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp DQT      &kp STAR  &mt RSHFT PLUS    &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL SEMI
+                &trans  &trans           &trans         &trans         &kp UNDER        &kp BSLH     &kp PIPE  &kp EQUAL         &kp LT         &kp GT         &kp QMARK       &trans
+                                                        &trans         &none            &kp TAB      &kp BSPC  &kp RC(RG(RALT))  &trans
             >;
         };
         lyr4_layer {
+            label = "Number & Symbol Layer";
+            bindings = <
+                        &kp N1           &kp N2         &kp N3         &kp N4            &kp N5      &kp N6    &kp N7          &kp N8         &kp N9         &kp N0
+                        &mt LCTRL TILDE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS   &kp SQT     &kp STAR  &mt RSHFT PLUS  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL COLON
+                &trans  &trans           &trans         &trans         &kp UNDER         &kp BSLH    &kp PIPE  &kp EQUAL       &kp LT         &kp GT         &kp QMARK       &trans
+                                                        &trans         &kp LC(LG(LALT))  &kp TAB     &kp BSPC  &none           &trans
+            >;
+        };
+        lyr5_layer {
             label= "Function and Keypad Layer";
             bindings = <
                         &kp F1        &kp F2       &kp F3       &kp F4        &none      &kp KP_SLASH  &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp KP_PLUS
