@@ -63,19 +63,19 @@
         lyr1_layer {
             label = "Control & Adjust Layer";
             bindings = <
-                        &bt BT_NXT  &kp C_BRI_DN  &trans     &kp C_BRI_UP  &trans     &trans    &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans
-                        &bt BT_CLR  &kp HOME      &kp PG_UP  &kp PG_DN     &kp END    &kp LEFT  &kp DOWN      &kp UP      &kp RIGHT     &trans
-                &trans  &bt BT_PRV  &trans        &trans     &trans        &trans     &trans    &kp C_PREV    &kp C_PP    &kp C_NEXT    &trans  &trans
-                                                  &trans     &trans        &trans     &trans    &trans        &trans
+                        &none            &kp ESC       &kp C_BRI_UP    &kp HOME         &bt BT_NXT    &none     &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none
+                        &mt LCTRL GRAVE  &mt LALT TAB  &mt LCMD PG_UP  &mt LSHFT PG_DN  &bt BT_CLR    &kp LEFT  &kp DOWN      &kp UP      &kp RIGHT     &kp RET
+                &trans  &none            &none         &kp C_BRI_DN    &kp END          &bt BT_PRV    &none     &kp C_PREV    &kp C_PP    &kp C_NEXT    &none   &trans
+                                                       &trans          &trans           &trans        &trans    &trans        &trans
             >;
         };
         lyr2_layer {
-            label = "Control & Number Layer";
+            label = "Control Layer";
             bindings = <
-                        &trans     &kp ESC        &kp ESC          &trans           &trans     &trans    &trans    &trans  &kp BSPC   &trans
-                        &kp TILDE  &mt LALT HOME  &mt LCTRL PG_UP  &mt LSHFT PG_DN  &kp END    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
-                &trans  &trans     &trans         &trans           &trans           &trans     &trans    &trans    &trans  &trans     &trans   &trans
-                                                  &trans           &kp ESC          &kp TAB    &kp BSPC  &kp RET   &trans
+                        &trans           &kp ESC       &trans          &kp HOME         &trans     &trans    &trans    &trans  &kp BSPC   &trans
+                        &mt LCTRL GRAVE  &mt LALT TAB  &mt LCMD PG_UP  &mt LSHFT PG_DN  &trans     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
+                &trans  &trans           &trans        &trans          &kp END          &trans     &trans    &trans    &trans  &trans     &trans   &trans
+                                                       &trans          &kp ESC          &kp TAB    &kp RET   &kp BSPC  &trans
             >;
         };
         lyr3_layer {
@@ -84,16 +84,16 @@
                         &kp EXCL         &kp AT         &kp HASH       &kp DLLR         &kp PRCNT    &kp AMPS  &kp CARET       &kp LPAR       &kp RPAR       &kp DQT
                         &mt LCTRL GRAVE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp SQT      &kp STAR  &mt RSHFT PLUS  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL SEMI
                 &trans  &trans           &trans         &trans         &kp UNDER        &kp BSLH     &kp PIPE  &kp EQUAL       &kp LT         &kp GT         &kp QMARK       &trans
-                                                        &trans         &none            &kp TAB      &kp BSPC  &kp RET         &trans
+                                                        &trans         &none            &kp TAB      &kp BSPC  &kp RCMD        &trans
             >;
         };
         lyr4_layer {
             label = "Number & Symbol Layer";
             bindings = <
-                        &kp N1           &kp N2         &kp N3         &kp N4           &kp N5      &kp N6    &kp N7          &kp N8         &kp N9         &kp N0
-                        &mt LCTRL TILDE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp DQT     &kp STAR  &mt RSHFT PLUS  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL COLON
-                &trans  &trans           &trans         &trans         &kp UNDER        &kp BSLH    &kp PIPE  &kp EQUAL       &kp LT         &kp GT         &kp QMARK        &trans
-                                                        &trans         &kp ESC          &kp TAB     &kp BSPC  &none           &trans
+                        &kp N1           &kp N2         &kp N3         &kp N4           &kp N5       &kp N6    &kp N7          &kp N8         &kp N9         &kp N0
+                        &mt LCTRL TILDE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp DQT      &kp STAR  &mt RSHFT PLUS  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL COLON
+                &trans  &trans           &trans         &trans         &kp UNDER        &kp BSLH     &kp PIPE  &kp EQUAL       &kp LT         &kp GT         &kp QMARK        &trans
+                                                        &trans         &kp LCMD         &kp GRAVE    &kp BSPC  &none           &trans
             >;
         };
         lyr5_layer {
