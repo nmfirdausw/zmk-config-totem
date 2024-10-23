@@ -8,6 +8,7 @@
 #define LYR2 2
 #define LYR3 3
 #define LYR4 4
+#define LYR5 5
 
 &lt {
     tapping-term-ms = <100>;
