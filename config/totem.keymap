@@ -57,7 +57,7 @@
                          &kp W        &kp L       &kp Y                  &kp P             &kp B             &kp Z           &kp F             &kp O                   &kp U       &kp SQT
                          &mt LCTRL C  &mt LALT R  &mt LCMD S             &mt LSHFT T       &kp G             &kp M           &mt RSHFT N       &mt RCMD E              &mt RALT I  &mt RCTRL A
                 &kp ESC  &kp Q        &kp J       &kp V                  &kp D             &kp K             &kp X           &kp H             &kp COMMA               &kp PERIOD  &kp FSLH     &kp RET
-                                                  &mt LC(LG(LALT)) CAPS  &mo_sl LYR3 LYR3  &mo LYR2 SPACE    &lt LYR2 SPACE  &mo_sl LYR3 LYR3  &mt RC(RG(RALT)) GLOBE
+                                                  &mt LC(LG(LALT)) CAPS  &mo_sl LYR3 LYR3  &lt LYR2 SPACE    &lt LYR2 SPACE  &mo_sl LYR4 LYR4  &mt RC(RG(RALT)) GLOBE
             >;
         };
         lyr1_layer {
