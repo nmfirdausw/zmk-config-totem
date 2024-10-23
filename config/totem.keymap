@@ -90,7 +90,7 @@
         lyr4_layer {
             label = "Number & Symbol Layer";
             bindings = <
-                        &kp N1           &kp N2         &kp N3         &kp N4           &kp N5      &kp N6    &kp N7          &kp N8         &kp N9         &kp N10
+                        &kp N1           &kp N2         &kp N3         &kp N4           &kp N5      &kp N6    &kp N7          &kp N8         &kp N9         &kp N0
                         &mt LCTRL TILDE  &mt LALT LBRC  &mt LCMD RBRC  &mt LSHFT MINUS  &kp DQT     &kp STAR  &mt RSHFT PLUS  &mt RCMD LBKT  &mt RALT RBKT  &mt RCTRL COLON
                 &trans  &trans           &trans         &trans         &kp UNDER        &kp BSLH    &kp PIPE  &kp EQUAL       &kp LT         &kp GT         &kp QMARK        &trans
                                                         &trans         &kp ESC          &kp TAB     &kp BSPC  &none           &trans
