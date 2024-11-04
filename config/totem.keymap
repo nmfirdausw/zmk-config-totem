@@ -72,9 +72,9 @@
         lyr2_layer {
             label = "Control Layer";
             bindings = <
-                        &trans           &kp ESC       &trans          &kp HOME         &trans     &trans    &trans    &trans  &kp BSPC   &trans
-                        &mt LCTRL GRAVE  &mt LALT TAB  &mt LCMD PG_UP  &mt LSHFT PG_DN  &trans     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
-                &trans  &trans           &trans        &trans          &kp END          &trans     &trans    &trans    &trans  &trans     &trans   &trans
+                        &trans           &kp ESC       &trans          &kp HOME         &bt BT_NXT     &trans    &trans    &trans  &kp BSPC   &trans
+                        &mt LCTRL GRAVE  &mt LALT TAB  &mt LCMD PG_UP  &mt LSHFT PG_DN  &bt BT_CLR     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp RET
+                &trans  &trans           &trans        &trans          &kp END          &bt BT_PRV     &trans    &trans    &trans  &trans     &trans   &trans
                                                        &bt BT_CLR_ALL  &kp ESC          &kp TAB    &kp RET   &kp BSPC  &trans
             >;
         };
