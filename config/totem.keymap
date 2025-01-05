@@ -71,10 +71,10 @@
         layer_1 {
             label = "Symbol Layer";
             bindings = <
-        &kp AT           &kp LBRC      &kp RBRC       &kp BSLH        &kp PIPE    &kp STAR   &kp FSLH        &kp LT           &kp GT               &kp EXCL
-        &mt LCTRL GRAVE  &mt LALT SQT  &mt LSHFT DQT  &mt LCMD COLON  &kp AMPS    &kp PLUS   &mt RCMD MINUS  &mt RSHFT EQUAL  &mt RALT UNDERSCORE  &mt RCTRL SEMICOLON
-&trans  &kp TILDE        &kp LBKT      &kp RBKT       &kp CARET       &kp HASH    &kp PRCNT  &kp DLLR        &kp LPAR         &kp RPAR             &kp QMARK            &trans
-                                       &trans         &trans          &trans      &trans     &trans          &trans
+        &kp AT           &kp LBRC      &kp RBRC       &kp BSLH        &kp PIPE       &kp STAR    &kp FSLH        &kp LT           &kp GT               &kp EXCL
+        &mt LCTRL GRAVE  &mt LALT SQT  &mt LSHFT DQT  &mt LCMD COLON  &kp AMPS       &kp PLUS    &mt RCMD MINUS  &mt RSHFT EQUAL  &mt RALT UNDERSCORE  &mt RCTRL SEMICOLON
+&trans  &kp TILDE        &kp LBKT      &kp RBKT       &kp CARET       &kp HASH       &kp PRCNT   &kp DLLR        &kp LPAR         &kp RPAR             &kp QMARK            &trans
+                                       &trans         &lt 2 ESC       &lt 2 LC(D)    &lt 2 BSPC  &lt 2 ENTER     &trans
             >;
         };
 
@@ -83,8 +83,8 @@
             bindings = <
         &kp NUMBER_1  &kp NUMBER_2  &kp N3     &kp N4        &kp N5        &kp N6    &kp N7      &kp N8    &kp N9      &kp N0
         &kp HOME      &kp C_VOL_DN  &kp PG_UP  &kp C_VOL_UP  &kp C_MUTE    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT   &kp END
-&trans  &trans        &kp C_BRI_DN  &kp PG_DN  &kp C_BRI_UP  &trans        &trans    &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans   &trans
-                                    &trans     &kp ESC       &kp TAB       &kp BSPC  &kp ENTER   &trans
+&trans  &kp CLCK      &kp C_BRI_DN  &kp PG_DN  &kp C_BRI_UP  &trans        &trans    &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp GLOBE  &trans
+                                    &trans     &kp ESC       &kp LC(D)     &kp BSPC  &kp ENTER   &trans
             >;
         };
 
