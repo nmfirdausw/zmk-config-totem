@@ -94,7 +94,7 @@
         &kp LG(LS(GRAVE))  &kp ESC      &kp C_MUTE  &kp C_VOL_DN  &kp C_BRI_DN    &kp C_BRI_UP  &kp C_VOL_UP  &kp LC(D)  &kp BSPC    &kp LG(GRAVE)
         &kp HOME           &kp LS(TAB)  &kp TAB     &kp PG_UP     &kp END         &kp LEFT      &kp DOWN      &kp UP     &kp RIGHT   &kp ENTER
 &trans  &kp CLCK           &trans       &trans      &kp PG_DN     &trans          &trans        &kp C_PREV    &kp C_PP   &kp C_NEXT  &kp GLOBE      &trans
-                                        &trans      &kp ESC       &kp LCMD        &kp RCMD      &kp ENTER     &trans
+                                        &trans      &kp LCTRL     &kp LCMD        &kp RCMD      &kp RCTRL     &trans
             >;
         };
 
