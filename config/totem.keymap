@@ -64,7 +64,7 @@
          &kp W        &kp L       &kp Y        &kp P       &kp B          &kp Z        &kp F       &kp O              &kp U       &kp COLON
          &mt LCTRL C  &mt LALT R  &mt LSHFT S  &mt LCMD T  &kp G          &kp M        &mt RCMD N  &mt RSHFT E        &mt RALT I  &mt RCTRL A
 &kp ESC  &kp Q        &kp J       &kp V        &kp D       &kp K          &kp X        &kp H       &kp COMMA          &kp DOT     &kp FSLH     &kp RET
-                                  &kp LBKT     &mo_sl 1 1  &lt 3 SPACE    &lt 3 SPACE  &mo_sl 1 1  &kp RIGHT_BRACKET
+                                  &kp LBKT     &mo_sl 2 2  &lt 3 SPACE    &lt 3 SPACE  &mo_sl 2 2  &kp RIGHT_BRACKET
             >;
         };
 
