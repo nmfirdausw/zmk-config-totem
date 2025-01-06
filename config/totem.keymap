@@ -37,12 +37,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_lyr1 {
-            timeout-ms = <100>;
-            key-positions = <6 7 8 6 7>;
-            bindings = <&tog 0>;
-        };
-
         combo_lyr3 {
             timeout-ms = <100>;
             key-positions = <1 2 3>;
