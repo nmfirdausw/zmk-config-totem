@@ -61,7 +61,7 @@
         layer_0 {
             label = "Base Layer";
             bindings = <
-         &kp W        &kp L       &kp Y        &kp P       &kp B          &kp Z        &kp F       &kp O              &kp U       &kp COLON
+         &kp W        &kp L       &kp Y        &kp P       &kp B          &kp Z        &kp F       &kp O              &kp U       &kp GRAVE
          &mt LCTRL C  &mt LALT R  &mt LSHFT S  &mt LCMD T  &kp G          &kp M        &mt RCMD N  &mt RSHFT E        &mt RALT I  &mt RCTRL A
 &kp ESC  &kp Q        &kp J       &kp V        &kp D       &kp K          &kp X        &kp H       &kp COMMA          &kp DOT     &kp FSLH     &kp RET
                                   &kp LBKT     &mo_sl 2 2  &lt 3 SPACE    &lt 4 SPACE  &mo_sl 2 2  &kp RIGHT_BRACKET
@@ -111,14 +111,13 @@
         };
 
         layer_5 {
-            bindings = <
-        &kp HOME   &kp ESC    &kp C_BRI_DN   &kp C_BRI_UP  &none    &kp AT     &kp EQUAL       &kp LT          &kp GT         &kp EXCL
-        &kp LCTRL  &kp GRAVE  &mt LSHFT TAB  &kp LCMD      &none    &kp UNDER  &mt RCMD MINUS  &mt RSHFT LBKT  &mt RALT RBKT  &mt RCTRL SEMI
-&trans  &none      &none      &kp PG_DN      &kp PG_UP     &none    &kp PRCNT  &kp HASH        &kp DLLR        &kp PIPE       &kp QMARK       &trans
-                              &trans         &mo_sl 6 6    &none    &none      &mo_sl 6 6      &trans
-            >;
-
             label = "Left Control and Symbol Layer 2";
+            bindings = <
+        &kp HOME   &kp ESC    &kp C_BRI_DN   &kp C_BRI_UP  &none    &kp AMPS  &kp EQUAL       &kp LBKT        &kp RBKT       &kp TILDE
+        &kp LCTRL  &kp GRAVE  &mt LSHFT TAB  &kp LCMD      &none    &kp PIPE  &mt RCMD COLON  &mt RSHFT LPAR  &mt RALT RPAR  &mt RCTRL SEMI
+&trans  &none      &none      &kp PG_DN      &kp PG_UP     &none    &kp BSLH  &kp DLLR        &kp LBRC        &kp RBRC       &kp QMARK       &trans
+                              &trans         &mo_sl 6 6    &none    &none     &mo_sl 6 6      &trans
+            >;
         };
 
         layer_6 {
