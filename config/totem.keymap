@@ -90,9 +90,9 @@
 
         layer_3 {
             bindings = <
-        &kp HOME   &kp ESC    &kp C_BRI_DN   &kp C_BRI_UP  &none    &kp AT       &kp EQUAL       &kp LT          &kp GT         &kp EXCL
-        &kp LCTRL  &kp GRAVE  &mt LSHFT TAB  &kp LCMD      &none    &kp UNDER    &mt RCMD MINUS  &mt RSHFT LBKT  &mt RALT RBKT  &mt RCTRL SEMI
-&trans  &none      &none      &kp PG_DN      &kp PG_UP     &none    &kp PRCNT    &kp HASH        &kp DLLR        &kp PIPE       &kp QMARK       &trans
+        &kp HOME   &kp ESC    &kp C_BRI_DN   &kp C_BRI_UP  &none    &kp AMPS     &kp EQUAL       &kp LBKT        &kp RBKT       &kp TILDE
+        &kp LCTRL  &kp GRAVE  &mt LSHFT TAB  &kp LCMD      &none    &kp PIPE     &mt RCMD COLON  &mt RSHFT LPAR  &mt RALT RPAR  &mt RCTRL SEMI
+&trans  &none      &none      &kp PG_DN      &kp PG_UP     &none    &kp BSLH     &kp DLLR        &kp LBRC        &kp RBRC       &kp QMARK       &trans
                               &trans         &mo_sl 6 6    &none    &lt 4 SPACE  &mo_sl 6 6      &trans
             >;
 
@@ -101,10 +101,10 @@
 
         layer_4 {
             bindings = <
-        &kp GRAVE      &kp LPAR       &kp RPAR                 &kp EQUAL      &kp FSLH       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp BSPC    &kp END
-        &mt LCTRL SQT  &mt LALT LBRC  &mt LSHFT DOUBLE_QUOTES  &mt LCMD RBRC  &kp STAR       &kp LEFT    &kp DOWN      &kp UP           &kp RIGHT   &kp ENTER
-&trans  &kp BSLH       &kp AMPS       &kp CARET                &kp MINUS      &kp PLUS       &none       &kp C_PREV    &kp C_PP         &kp C_NEXT  &none      &trans
-                                      &trans                   &mo_sl 6 6     &lt 5 SPACE    &none       &mo_sl 6 6    &trans
+        &kp DQT        &kp LT          &kp GT          &kp EQUAL       &kp PRCNT      &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp BSPC    &kp END
+        &mt LCTRL SQT  &mt LALT MINUS  &mt LSHFT EXCL  &mt LCMD UNDER  &kp ASTRK      &kp LEFT    &kp DOWN      &kp UP           &kp RIGHT   &kp ENTER
+&trans  &kp HASH       &kp PLUS        &kp AT          &kp CARET       &kp FSLH       &none       &kp C_PREV    &kp C_PP         &kp C_NEXT  &none      &trans
+                                       &trans          &mo_sl 6 6      &lt 5 SPACE    &none       &mo_sl 6 6    &trans
             >;
 
             label = "Right Control and Symbol Layer";
