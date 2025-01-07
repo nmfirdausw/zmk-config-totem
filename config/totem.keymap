@@ -37,7 +37,7 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_lyr3 {
+        combo_fn_layer {
             timeout-ms = <100>;
             key-positions = <1 2 3>;
             bindings = <&tog 1>;
@@ -46,6 +46,11 @@
         bt_clear_combo {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <34 33 32>;
+        };
+
+        combo_control_layer {
+            bindings = <&none>;
+            key-positions = <6 7 8>;
         };
     };
 
@@ -58,7 +63,7 @@
          &kp W        &kp L       &kp Y        &kp P       &kp B          &kp Z        &kp F       &kp O              &kp U       &kp GRAVE
          &mt LCTRL C  &mt LALT R  &mt LSHFT S  &mt LCMD T  &kp G          &kp M        &mt RCMD N  &mt RSHFT E        &mt RALT I  &mt RCTRL A
 &kp ESC  &kp Q        &kp J       &kp V        &kp D       &kp K          &kp X        &kp H       &kp COMMA          &kp DOT     &kp FSLH     &kp RET
-                                  &kp LBKT     &mo_sl 2 2  &lt 3 SPACE    &lt 4 SPACE  &mo_sl 2 2  &kp RIGHT_BRACKET
+                                  &kp LBKT     &mo_sl 2 2  &lt 3 SPACE    &lt 2 SPACE  &mo_sl 2 2  &kp RIGHT_BRACKET
             >;
         };
 
@@ -73,49 +78,29 @@
         };
 
         layer_2 {
-            label = "Number Layer 1";
             bindings = <
-         &kp N1     &kp N2          &kp N3         &kp N4          &kp N5    &kp N6     &kp N7       &kp N8        &kp N9       &kp N0
-         &kp LCTRL  &mt LALT GRAVE  &mt LSHFT TAB  &mt LCMD COMMA  &none     &kp PLUS   &mt RCMD N4  &mt RSHFT N5  &mt RALT N6  &mt RCTRL ASTERISK
-&kp ESC  &none      &none           &none          &none           &none     &kp MINUS  &kp N1       &kp N2        &kp N3       &kp FSLH            &kp RET
-                                    &kp EQUAL      &kp DOT         &trans    &trans     &kp DOT      &kp EQUAL
+        &kp DQT        &kp LT          &kp GT          &kp EQUAL       &kp PRCNT    &kp AMPS  &kp EQUAL       &kp LBKT        &kp RBKT       &kp TILDE
+        &mt LCTRL SQT  &mt LALT MINUS  &mt LSHFT EXCL  &mt LCMD UNDER  &kp ASTRK    &kp PIPE  &mt RCMD COLON  &mt RSHFT LPAR  &mt RALT RPAR  &mt RCTRL SEMI
+&trans  &kp HASH       &kp PLUS        &kp AT          &kp CARET       &kp FSLH     &kp BSLH  &kp DLLR        &kp LBRC        &kp RBRC       &kp QMARK       &trans
+                                       &trans          &mo_sl 4 4      &trans       &trans    &mo_sl 4 4      &trans
             >;
+
+            label = "Symbol Layer";
         };
 
         layer_3 {
             bindings = <
-        &kp HOME   &kp ESC    &kp C_BRI_DN   &kp C_BRI_UP  &none    &kp AMPS     &kp EQUAL       &kp LBKT        &kp RBKT       &kp TILDE
-        &kp LCTRL  &kp GRAVE  &mt LSHFT TAB  &kp LCMD      &none    &kp PIPE     &mt RCMD COLON  &mt RSHFT LPAR  &mt RALT RPAR  &mt RCTRL SEMI
-&trans  &none      &none      &kp PG_DN      &kp PG_UP     &none    &kp BSLH     &kp DLLR        &kp LBRC        &kp RBRC       &kp QMARK       &trans
-                              &trans         &mo_sl 6 6    &none    &lt 4 SPACE  &mo_sl 6 6      &trans
+        &kp HOME         &kp ESC       &kp C_BRI_DN  &kp C_BRI_UP  &none      &kp C_MUTE  &kp C_VOL_DN    &kp C_VOL_UP  &kp BSPC    &kp END
+        &mt LCTRL GRAVE  &mt LALT TAB  &kp LSHFT     &kp LCMD      &none      &kp LEFT    &kp DOWN        &kp UP        &kp RIGHT   &kp RET
+&trans  &none            &none         &kp PG_DN     &kp PG_UP     &none      &none       &kp C_PREVIOUS  &kp C_PP      &kp C_NEXT  &none    &trans
+                                       &trans        &mo_sl 4 4    &kp TAB    &kp TAB     &mo_sl 4 4      &trans
             >;
 
             label = "Left Control and Symbol Layer 1";
         };
 
-        layer_4 {
-            bindings = <
-        &kp DQT        &kp LT          &kp GT          &kp EQUAL       &kp PRCNT      &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp BSPC    &kp END
-        &mt LCTRL SQT  &mt LALT MINUS  &mt LSHFT EXCL  &mt LCMD UNDER  &kp ASTRK      &kp LEFT    &kp DOWN      &kp UP           &kp RIGHT   &kp ENTER
-&trans  &kp HASH       &kp PLUS        &kp AT          &kp CARET       &kp FSLH       &none       &kp C_PREV    &kp C_PP         &kp C_NEXT  &none      &trans
-                                       &trans          &mo_sl 6 6      &lt 5 SPACE    &none       &mo_sl 6 6    &trans
-            >;
-
-            label = "Right Control and Symbol Layer";
-        };
-
-        layer_5 {
-            label = "Left Control and Symbol Layer 2";
-            bindings = <
-        &kp HOME   &kp ESC    &kp C_BRI_DN   &kp C_BRI_UP  &none    &kp AMPS  &kp EQUAL       &kp LBKT        &kp RBKT       &kp TILDE
-        &kp LCTRL  &kp GRAVE  &mt LSHFT TAB  &kp LCMD      &none    &kp PIPE  &mt RCMD COLON  &mt RSHFT LPAR  &mt RALT RPAR  &mt RCTRL SEMI
-&trans  &none      &none      &kp PG_DN      &kp PG_UP     &none    &kp BSLH  &kp DLLR        &kp LBRC        &kp RBRC       &kp QMARK       &trans
-                              &trans         &mo_sl 6 6    &none    &none     &mo_sl 6 6      &trans
-            >;
-        };
-
         layer_6 {
-            label = "Number Layer 2";
+            label = "Number Layer";
             bindings = <
          &kp N1     &kp N2          &kp N3         &kp N4          &kp N5       &kp N6     &kp N7       &kp N8        &kp N9       &kp N0
          &kp LCTRL  &mt LALT GRAVE  &mt LSHFT TAB  &mt LCMD COMMA  &none        &kp PLUS   &mt RCMD N4  &mt RSHFT N5  &mt RALT N6  &mt RCTRL ASTERISK
