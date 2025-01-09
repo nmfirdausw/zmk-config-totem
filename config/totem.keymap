@@ -49,7 +49,7 @@
         };
 
         combo_control_layer {
-            bindings = <&none>;
+            bindings = <&tog 3>;
             key-positions = <6 7 8>;
         };
     };
@@ -79,10 +79,10 @@
 
         layer_2 {
             bindings = <
-        &kp DQT        &kp LT          &kp GT          &kp EQUAL       &kp PRCNT    &kp AMPS  &kp EQUAL       &kp LBKT        &kp RBKT       &kp TILDE
-        &mt LCTRL SQT  &mt LALT MINUS  &mt LSHFT EXCL  &mt LCMD UNDER  &kp ASTRK    &kp PIPE  &mt RCMD COLON  &mt RSHFT LPAR  &mt RALT RPAR  &mt RCTRL SEMI
-&trans  &kp HASH       &kp PLUS        &kp AT          &kp CARET       &kp FSLH     &kp BSLH  &kp DLLR        &kp LBRC        &kp RBRC       &kp QMARK       &trans
-                                       &trans          &mo_sl 4 4      &trans       &trans    &mo_sl 4 4      &trans
+        &kp AT          &kp LPAR      &kp RPAR         &kp ASTRK     &kp PRCNT    &kp AMPS  &kp EXCL        &kp LBRC        &kp RBRC       &kp TILDE
+        &mt LCTRL DLLR  &mt LALT SQT  &mt LSHFT MINUS  &mt LCMD DQT  &kp CARET    &kp PIPE  &mt RCMD COLON  &mt RSHFT LBKT  &mt RALT RBKT  &kp SEMI
+&trans  &kp HASH        &kp FSLH      &kp UNDER        &kp PLUS      &kp EXCL     &kp BSLH  &kp EQUAL       &kp LT          &kp GT         &kp QMARK  &trans
+                                      &trans           &mo_sl 4 4    &trans       &trans    &mo_sl 4 4      &trans
             >;
 
             label = "Symbol Layer";
