@@ -79,10 +79,10 @@
 
         layer_2 {
             bindings = <
-        &kp AT          &kp LPAR      &kp RPAR         &kp ASTRK     &kp PRCNT    &kp AMPS  &kp EXCL        &kp LBRC        &kp RBRC       &kp TILDE
-        &mt LCTRL DLLR  &mt LALT SQT  &mt LSHFT MINUS  &mt LCMD DQT  &kp CARET    &kp PIPE  &mt RCMD COLON  &mt RSHFT LBKT  &mt RALT RBKT  &kp SEMI
-&trans  &kp HASH        &kp FSLH      &kp UNDER        &kp PLUS      &kp EXCL     &kp BSLH  &kp EQUAL       &kp LT          &kp GT         &kp QMARK  &trans
-                                      &trans           &mo_sl 4 4    &trans       &trans    &mo_sl 4 4      &trans
+        &kp AT          &kp LPAR      &kp RPAR       &kp CARET      &kp PRCNT    &kp AMPS  &kp DLLR     &kp LBKT         &kp RBKT        &kp SEMI
+        &mt LCTRL LBRC  &mt LALT SQT  &mt LSHFT DQT  &mt LCMD RBRC  &kp GRAVE    &kp PIPE  &mt RCMD LT  &mt RSHFT EQUAL  &mt RALT MINUS  &kp GT
+&trans  &kp HASH        &kp PLUS      &kp ASTRK      &kp COLON      &kp TILDE    &kp BSLH  &kp EXCL     &kp FSLH         &kp UNDER       &kp QMARK  &trans
+                                      &trans         &mo_sl 4 4     &trans       &trans    &mo_sl 4 4   &trans
             >;
 
             label = "Symbol Layer";
