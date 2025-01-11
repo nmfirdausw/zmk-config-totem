@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define LYR0 0
 #define LYR1 1
@@ -60,10 +62,10 @@
         layer_0 {
             label = "Base Layer";
             bindings = <
-         &kp W        &kp L       &kp Y        &kp P       &kp B          &kp Z        &kp F       &kp O              &kp U       &kp GRAVE
-         &mt LCTRL C  &mt LALT R  &mt LSHFT S  &mt LCMD T  &kp G          &kp M        &mt RCMD N  &mt RSHFT E        &mt RALT I  &mt RCTRL A
-&kp ESC  &kp Q        &kp J       &kp V        &kp D       &kp K          &kp X        &kp H       &kp COMMA          &kp DOT     &kp FSLH     &kp RET
-                                  &kp LBKT     &mo_sl 2 2  &lt 3 SPACE    &lt 3 SPACE  &mo_sl 2 2  &kp RIGHT_BRACKET
+         &kp W        &kp L       &kp Y        &kp P       &kp B          &kp Z        &kp F       &kp O        &kp U       &kp GRAVE
+         &mt LCTRL C  &mt LALT R  &mt LSHFT S  &mt LCMD T  &kp G          &kp M        &mt RCMD N  &mt RSHFT E  &mt RALT I  &mt RCTRL A
+&kp ESC  &kp Q        &kp J       &kp V        &kp D       &kp K          &kp X        &kp H       &kp COMMA    &kp DOT     &kp FSLH     &kp RET
+                                  &mo 5        &mo_sl 2 2  &lt 3 SPACE    &lt 3 SPACE  &mo_sl 2 2  &mo 5
             >;
         };
 
@@ -106,6 +108,15 @@
          &kp LCTRL  &mt LALT GRAVE  &mt LSHFT TAB  &mt LCMD COMMA  &none        &kp PLUS   &mt RCMD N4  &mt RSHFT N5  &mt RALT N6  &mt RCTRL ASTERISK
 &kp ESC  &none      &none           &none          &none           &none        &kp MINUS  &kp N1       &kp N2        &kp N3       &kp FSLH            &kp RET
                                     &kp EQUAL      &kp DOT         &kp SPACE    &kp SPACE  &kp DOT      &kp EQUAL
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+        &none  &none           &mmv MOVE_UP    &none            &none       &none     &none           &mmv MOVE_UP    &none            &none
+        &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&trans  &none  &mkp MB4        &none           &mkp MB5         &none       &none     &mkp MB4        &none           &mkp MB5         &none  &trans
+                               &mkp MB1        &mkp MB3         &mkp MB2    &mkp MB1  &mkp MB3        &mkp MB2
             >;
         };
     };
