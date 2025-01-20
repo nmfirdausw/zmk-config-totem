@@ -72,7 +72,7 @@
 
         Mouse {
             bindings = <&tog 6>;
-            key-positions = <32 37>;
+            key-positions = <18 17 16>;
         };
 
         toggle_control_layer {
